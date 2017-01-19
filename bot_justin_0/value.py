@@ -4,6 +4,17 @@ Created on Wed Jan 18 17:32:38 2017
 
 @author: Jeff
 """
+
+#POINT VALUES (to be modified)
+pair = 2.0
+two_pair = 4.0
+three_of_a_kind = 6.0
+straight = 8.0
+flush = 10.0
+full_house = 12.0
+four_of_a_kind = 14.0
+straight_flush = 16.0
+
 def get_full_hand(data, newhand):
     x=data.split()
     y=newhand.split()
