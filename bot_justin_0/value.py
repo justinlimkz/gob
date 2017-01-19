@@ -161,6 +161,6 @@ def high(hand):#determines high card
     list_card.sort()
     return [0,list_card[4]]
     
-new='NEWHAND 10 true Ah Ac 200 200 20.000000'
-get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
-print (get_full_hand(get,new))
+#new='NEWHAND 10 true Ah Ac 200 200 20.000000'
+#get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
+#print (get_full_hand(get,new))
