@@ -2,7 +2,10 @@ import argparse
 import socket
 import sys
 
-import prefloplogic as pl
+import preflop
+import flop
+import turn
+import river
 import value
 
 """
@@ -35,15 +38,23 @@ class Player:
             # illegal action.
             # When sending responses, terminate each response with a newline
             # character (\n) or your bot will hang!
+            
+            
             word = data.split()[0]
             if word == "NEWHAND":
             	myHand = data.split()[3], data.split()[4]
             	print myHand
             if word == "GETACTION":
-                # Currently CHECK on every move. You'll want to change this.
-                action = pl.getaction(myHand, data)
+            	numBoardCards = int(data.split()[2]) 
+            	if numBoardCards == 0:
+            		action = preflop.getAction(myHand, data)
+            	elif numBoardCards == 3:
+            		action = flop.getAction(myHand, data)
+            	elif numBoardCards == 4:
+            		action = turn.getAction(myHand, data)
+            	else:
+            		action = river.getAction(myHand, data)
                 s.send(action)
-                #s.send("CALL\n")
             elif word == "REQUESTKEYVALUES":
                 # At the end, the engine will allow your bot save key/value pairs.
                 # Send FINISH to indicate you're done.
