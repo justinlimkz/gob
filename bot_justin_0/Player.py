@@ -42,7 +42,7 @@ class Player:
             
             word = data.split()[0]
             if word == "NEWHAND":
-            	myHand = data.split()[3], data.split()[4]
+            	myHand = [data.split()[3], data.split()[4]]
             	print myHand
             if word == "GETACTION":
             	numBoardCards = int(data.split()[2]) 
