@@ -30,6 +30,7 @@ def getAction(myHand, data):
     print combined
     
     if canDoThis("DISCARD", data):
+        #If royal flush or straight flush or 4 of a kind or full house
         if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) != NO or value.is_of_a_kind(combined)[0] == 7:
             if value.is_of_a_kind(combined)[0] == 7 and myHand[0][0] != myHand[1][0]: 
                 #four of a kind but only uses one card in hand
@@ -50,8 +51,33 @@ def getAction(myHand, data):
                 return "DISCARD:" + myHand[0] + '\n'
                 
         if value.double_sided_straight(combined) != False:
-            return "CHECK\n"
-        
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0] <= low_card + 3 and low_card <= myHand[1] <= low_card + 3): #both cards
+                return "CHECK\n"
+            elif(low_card <= myHand[0] <= low_card + 3): #one card
+                return "DISCARD:" + myHand[1] + '\n'
+            elif(low_card <= myHand[1] <= low_card + 3): #one card
+                return "DISCARD:" + myHand[0] + '\n'
+
+        if value.hole_straight(combined) != False:
+            if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
+                if(9 > myHand[0][0] < myHand[1][0]):
+                    return "DISCARD:" + myHand[0] + '\n'
+                elif(9 > myHand[1][0] < myHand[0][0]):
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            elif(low_card <= myHand[0][0] <= low_card + 4): #one card
+                if(value.is_of_a_kind(board+myHand[0])[0] >= 1): #at least a pair made from board & first card
+                    return "DISCARD:" + myHand[1] + '\n'
+                else:
+                    return "CHECK\n"
+            elif(low_card <= myHand[1][0] <= low_card + 4): #one card
+                if(value.is_of_a_kind(board+myHand[1])[0] >= 1): #at least a pair made from board & first card
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+
         if value.is_of_a_kind(combined)[0] == 3:
             if myHand[0][0] != myHand[1][0]:
                 if myHand[0][0] == value.is_of_a_kind(combined)[1]:
