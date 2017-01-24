@@ -4,6 +4,8 @@ rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 
 
 NO = [-1, -1]
 
+limit = 0
+
 def canDoThis(action, data):
     packet = data.split()
     numBoardCards = int(packet[2])
@@ -104,4 +106,5 @@ def getAction(myHand, data):
         return "CALL\n"
         
     else:
+        
         return "CALL\n"
