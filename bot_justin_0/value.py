@@ -202,6 +202,30 @@ def double_sided_straight(hand): #checks if we have a 4-card, double sided strai
         if straight:
             return i
     return False
+
+def hole_straight(hand): #checks if we have a 4-card, straight with a hole (e.g. 45_78)
+    nums = []
+    card_dict={'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13}
+    for card in hand:
+        nums.append(card_dict[card[0]])
+    for i in reversed(range(2, 10)):
+        straight = True
+        hole = False
+        for j in range(i, i+5):
+            if(j==i or j==i+4): #if either end of 5-card striaight
+                if j not in nums:
+                    straight = False
+                    break
+            else:
+                if j not in nums:
+                    if not hole:
+                        hole = True
+                    else:
+                        straight = False
+                        break
+        if straight:
+            return i
+    return False
     
 #new='NEWHAND 10 true Ah Ac 200 200 20.000000'
 #get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
