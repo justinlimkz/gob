@@ -172,6 +172,38 @@ def high(hand):#determines high card
     list_card.sort()
     return [0,list_card[4]]
     
+def count_same_suit(hand): #returns number of cards with same suit
+    suits = ['c','d','s','h']
+    best = 0
+    best_suit = '.'
+    for suit in suits:
+        count = 0
+        for card in hand:
+            if card[1] == suit:
+                count += 1
+        if count > best:
+            best = count
+            best_suit = suit
+    if best == 0:
+        return [-1, -1]
+    else:
+        return [best, best_suit]
+        
+def double_sided_straight(hand): #checks if we have a 4-card, double sided straight
+    nums = []
+    card_dict={'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13}
+    for card in hand:
+        nums.append(card_dict[card[0]])
+    for i in reversed(range(2, 11)):
+        straight = True
+        for j in range(i, i+4):
+            if j not in nums:
+                straight = False
+                break
+        if straight:
+            return i
+    return False
+    
 #new='NEWHAND 10 true Ah Ac 200 200 20.000000'
 #get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
 #print (get_full_hand(get,new))
