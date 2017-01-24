@@ -52,6 +52,6 @@ def getAction(myHand, data):
     if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
         limit=0
     else:
-        limit=
+        limit=value.high(hand)[1]*3
 
     return "CALL\n";
