@@ -1,2 +1,57 @@
+import value
+
+rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+
+def canDoThis(action, data):
+    packet = data.split()
+    numBoardCards = int(packet[2])
+    numLastActions = int(packet[2+numBoardCards+1])
+    numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
+        
+    for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
+        if packet[i][0:len(action)] == action:
+            return True
+    return False
+
 def getAction(myHand, data):
-	return "CALL\n";
+    packet = data.split
+    numBoard = int(packet[2])
+    boardCards = packet[3]
+    numLastActions = int(packet[2+numBoardCards+1])
+    numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
+    
+    limit=0
+    
+    hand=value.get_full_hand(data,myHand)
+    if value.is_royal(hand)[0]>0 or value.is_flush(hand)[0]>0 or value.is_of_a_kind(hand)[0]>2 or value.is_full_house[0]>4 or value.is_straight[0]>0:
+        if canDoThis("RAISE: 200\n",data):
+            return "RAISE: 200\n"
+    if value.is_full_house(hand)[0]==2:
+        if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
+            limit=25
+        elif value.is_full_house(hand)[1] in myHand:
+            if canDoThis("RAISE: 200\n",data):
+                return "RAISE: 200\n"
+        else:
+            limit=25
+    if value.is_of_a_kind(hand)[0]==1:
+        if value.is_of_a_kind(hand)[1] in myHand:
+            if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
+                limit=30
+            else:
+                pair_card=value.is_of_a_kind(hand)[1]
+                rank=1
+                for i in boardCards:
+                    if pair_card<i:
+                        rank+=1
+                limit=6*pair_card+(4-rank)*40
+                if limit>200:
+                    limit=200
+        else:
+            limit=15
+    if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
+        limit=0
+    else:
+        limit=
+
+    return "CALL\n";

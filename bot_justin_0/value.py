@@ -166,11 +166,10 @@ def high(hand):#determines high card
     list_card=[]
     card_dict={'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13}
     for i in hand:
-        splitted=i.split()
-        card=splitted[0]
+        card=i[0]
         list_card.append(card_dict[card])
     list_card.sort()
-    return [0,list_card[4]]
+    return [0,list_card[-1]]
     
 def count_same_suit(hand): #returns number of cards with same suit
     suits = ['c','d','s','h']
