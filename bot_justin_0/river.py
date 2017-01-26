@@ -16,7 +16,7 @@ def canDoThis(action, data):
 def getAction(myHand, data):
     packet = data.split()
     numBoardCards = int(packet[2])
-    boardCards = packet[3]
+    boardCards = packet[3:3+numBoardCards]
     numLastActions = int(packet[2+numBoardCards+1])
     numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
     
@@ -46,7 +46,7 @@ def getAction(myHand, data):
             return "RAISE:"+MaxRaise+"\n"
         elif canDoThis("BET", data):
             return "BET:"+MaxBet+"\n"
-    if value.is_full_house(hand)[0]==2:
+    elif value.is_full_house(hand)[0]==2:
         if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
             limit=25
         elif value.is_full_house(hand)[1] in myHand:
@@ -56,7 +56,7 @@ def getAction(myHand, data):
                 return "BET"+MaxBet+"\n"
         else:
             limit=25
-    if value.is_of_a_kind(hand)[0]==1:
+    elif value.is_of_a_kind(hand)[0]==1:
         if value.is_of_a_kind(hand)[1] in myHand:
             if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
                 limit=30
@@ -71,7 +71,7 @@ def getAction(myHand, data):
                     limit=200
         else:
             limit=15
-    if value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)[0]!=False:
+    elif value.count_same_suit(boardCards)[0]==4 or value.double_sided_straight(boardCards)!=False:
         limit=0
     else:
         limit=value.high(hand)[1]*3

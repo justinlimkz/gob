@@ -1,20 +1,187 @@
 import value
 
 def canDoThis(action, data):
-	packet = data.split()
-	numBoardCards = int(packet[2])
-	numLastActions = int(packet[2+numBoardCards+1])
-	numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
-	
-	for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
-		if packet[i][0:len(action)] == action:
-			return True
-      return False
+    packet = data.split()
+    numBoardCards = int(packet[2])
+    numLastActions = int(packet[2+numBoardCards+1])
+    numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
+    
+    for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
+        if packet[i][0:len(action)] == action:
+            return True
+    return False
 
-
-rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+NO = [-1, -1]
 
 def getAction(myHand, data):
+    rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+
+    packet = data.split()
+    
+    numBoardCards = int(packet[2])
+    numLastActions = int(packet[2+numBoardCards+1])
+    numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
+    
+    board = packet[3:3+numBoardCards]
+    combined = myHand
+    combined.extend(board)
+    
+    if canDoThis("DISCARD", data):
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined)[0] == 6 or value.is_of_a_kind(combined)[0] == 7:
+            if value.is_of_a_kind(combined)[0] == 7: #four of a kind
+                if rank[myHand[0][0]] == value.is_of_a_kind(combined)[1] and rank[myHand[1][0]] == value.is_of_a_kind(combined)[1]:
+                    return "CHECK\n"
+                elif rank[myHand[0][0]] == value.is_of_a_kind(combined)[1]: #one card
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif rank[myHand[1][0]] == value.is_of_a_kind(combined)[1]: #one card
+                    return "DISCARD:" + myHand[0] + '\n'
+                elif rank[myHand[0][0]] < rank[myHand[1][0]]: #discard lower card
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "DISCARD:" + myHand[1] + '\n'
+                
+            if value.is_flush(combined) != NO:
+                if value.is_flush(board+[myHand[0]]) != NO: #discard card that is not part of flush
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif value.is_flush(board+[myHand[1]]) != NO:
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+                    
+            if value.is_straight(combined) != NO:
+                if value.is_straight(board+[myHand[0]]) != NO: #discard card that is not part of straight
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif value.is_straight(board+[myHand[1]]) != NO:
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            
+            if value.is_full_house(combined) == 6:
+                if value.is_full_house(board+[myHand[0]]) != NO: #discard card that is not part of full house
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif value.is_full_house(board+[myHand[1]]) != NO:
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+                
+        if value.count_same_suit(combined)[0] == 4:
+            suit = value.count_same_suit(combined)[1]
+            if myHand[0][1] == suit and myHand[1][1] == suit: #if both cards part of flush, don't discard
+                return "CHECK\n"
+            elif myHand[0][1] == suit: #discard other card
+                return "DISCARD:" + myHand[1] + '\n'
+            elif myHand[1][1] == suit:
+                return "DISCARD:" + myHand[0] + '\n'
+            else: 
+                if myHand[0][0] == myHand[1][0]: #if pair, don't discard
+                    return "CHECK\n"
+                elif myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]: #if pair, discard other card
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif myHand[1][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                    return "DISCARD:" + myHand[0] + '\n' 
+                elif rank[myHand[0][0]] > rank[myHand[1][0]]: #discard lower card
+                    return "DISCARD:" + myHand[1] + '\n'
+                else:
+                    return "DISCARD:" + myHand[0] + '\n'
+                
+                
+        if value.double_sided_straight(combined) != False:
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0] <= low_card + 3 and low_card <= myHand[1] <= low_card + 3): #both cards
+                return "CHECK\n"
+            elif(low_card <= myHand[0] <= low_card + 3): #one card
+                return "DISCARD:" + myHand[1] + '\n'
+            elif(low_card <= myHand[1] <= low_card + 3): #one card
+                return "DISCARD:" + myHand[0] + '\n'
+            else:
+                if myHand[0][0] == myHand[1][0]:
+                    return "CHECK\n"
+                elif myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif myHand[1][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                    return "DISCARD:" + myHand[0] + '\n' 
+                elif rank[myHand[0][0]] > rank[myHand[1][0]]:
+                    return "DISCARD:" + myHand[1] + '\n'
+                else:
+                    return "DISCARD:" + myHand[0] + '\n'
+
+        if value.hole_straight(combined) != False:
+            if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
+                if(9 > myHand[0][0] < myHand[1][0]):
+                    return "DISCARD:" + myHand[0] + '\n'
+                elif(9 > myHand[1][0] < myHand[0][0]):
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            elif(low_card <= myHand[0][0] <= low_card + 4): #one card
+                if(value.is_of_a_kind(board+myHand[0])[0] >= 1): #at least a pair made from board & first card
+                    return "DISCARD:" + myHand[1] + '\n'
+                else:
+                    return "CHECK\n"
+            elif(low_card <= myHand[1][0] <= low_card + 4): #one card
+                if(value.is_of_a_kind(board+myHand[1])[0] >= 1): #at least a pair made from board & first card
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            elif rank[myHand[0][0]] > rank[myHand[1][0]]: #discard lower card
+                return "DISCARD:" + myHand[1] + '\n'
+            else:
+                return "DISCARD:" + myHand[0] + '\n'
+
+        if value.is_of_a_kind(combined)[0] == 3:
+            if myHand[0][0] != myHand[1][0]: 
+                if rank[myHand[0][0]] == value.is_of_a_kind(combined)[1]: #if one card isn't part of triple, discard other card
+                    return "DISCARD:" + myHand[1] + '\n'
+                elif rank[myHand[1][0]] == value.is_of_a_kind(combined)[1]:
+                    return "DISCARD:" + myHand[0] + '\n'
+                elif rank[myHand[0][0]] > rank[myHand[1][0]]: #discard lower card
+                    return "DISCARD:" + myHand[1] + '\n'
+                else:
+                    return "DISCARD:" + myHand[0] + '\n'
+            else: #stay if pockets
+                return "CHECK\n";
+        
+        if value.is_full_house(combined)[0] == 2: #two pair
+            if myHand[0][0] == myHand[1][0]: #pockets
+                if rank[myHand[0][0]] < min(rank(board[0][0]), rank(board[1][0]), rank(board[2][0]), rank(board[3][0])): #if we have the lowest pair
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            elif myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]] and myHand[1][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]: #both cards used
+                return "CHECK\n"
+            else:
+                if myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                    return "DISCARD:" + myHand[1] + '\n' 
+                else:
+                    return "DISCARD:" + myHand[0] + '\n'
+        
+        if value.is_full_house(combined)[0] == 1: #pair
+            if myHand[0][0] == myHand[1][0]: #pockets
+                return "CHECK\n"
+            elif myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                if rank[myHand[1][0]] < rank['J']:
+                    return "DISCARD:" + myHand[1] + '\n' 
+                else:
+                    return "CHECK\n"
+            elif myHand[1][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:
+                if rank[myHand[0][0]] < rank['J']:
+                    return "DISCARD:" + myHand[0] + '\n' 
+                else:
+                    return "CHECK\n"
+            elif rank[myHand[0][0]] > rank[myHand[1][0]]: #discard lower card
+                return "DISCARD:" + myHand[1] + '\n'
+            else:
+                return "DISCARD:" + myHand[0] + '\n'
+        
+        if rank[myHand[0][0]] > rank[myHand[1][0]]: #discard lower card
+            return "DISCARD:" + myHand[1] + '\n'
+        else:
+            return "DISCARD:" + myHand[0] + '\n'
+            
+        return "CALL\n"
+    
+    return "CALL\n"
+    '''
     hand = value.get_full_hand(data, myHand)
     royal_check = value.is_royal(hand)
     full_value = value.is_full_house(hand)
@@ -65,5 +232,6 @@ def getAction(myHand, data):
         
         
     return "CHECK\n"
+    '''
                 
     

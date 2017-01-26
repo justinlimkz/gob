@@ -35,17 +35,17 @@ def is_of_a_kind(hand):#for 2,3,4 of a kind
                 count+=1
         list_counts.append(count)
     if 4 in list_counts:
-        for i in range(5):
+        for i in range(len(hand)):
             if list_counts[i]==4:
                 four=card_dict[list_cards[i]]
         return [7,four]
     if 3 in list_counts:
-        for i in range(5):
+        for i in range(len(hand)):
             if list_counts[i]==3:
                 three=card_dict[list_cards[i]]
         return [3,three]
     if 2 in list_counts:
-        for i in range(5):
+        for i in range(len(hand)):
             if list_counts[i]==2:
                 two=card_dict[list_cards[i]]
         return [1,two]
@@ -80,7 +80,7 @@ def is_full_house(hand):#for full house or 2 pair
             return [6,card_dict[house]]
         elif twocount>=4:
             two_pairs=[]
-            for i in range(5):
+            for i in range(len(hand)):
                 if list_counts[i]==2:
                     if card_dict[list_cards[i]] not in two_pairs:
                         two_pairs.append(card_dict[list_cards[i]])
@@ -88,7 +88,7 @@ def is_full_house(hand):#for full house or 2 pair
                         two_pairs.reverse()
             return [2, two_pairs]
     elif threecount>=6:
-        for i in range(5):
+        for i in range(len(hand)):
             if list_counts[i]==3:
                 if card_dict[list_cards[i]]>current_max:
                     current_max=card_dict[list_cards[i]]
