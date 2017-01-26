@@ -30,7 +30,7 @@ def getAction(myHand, data):
     
     if canDoThis("DISCARD", data):
         #If royal flush or straight flush or 4 of a kind or full house
-        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) != NO or value.is_of_a_kind(combined)[0] == 7:
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) == 6 or value.is_of_a_kind(combined)[0] == 7:
             if value.is_of_a_kind(combined)[0] == 7 and myHand[0][0] != myHand[1][0]: 
                 #four of a kind but only uses one card in hand
                 if myHand[0][0] == board[0][0]:
@@ -99,9 +99,100 @@ def getAction(myHand, data):
                     return "DISCARD:" + myHand[1] + '\n' 
                 else:
                     return "DISCARD:" + myHand[0] + '\n'
+    
+        if value.is_of_a_kind(combined)[0] == 1:
+            cards_sorted = sorted(combined, key=lambda x: x[0])
+            if(myHand[0][0] == myHand[1][0]):
+                if(myHand[0][0] == cards_sorted[0][0]):
+                    return "DISCARD:" + myHand[0] + '\n'
+                else:
+                    return "CHECK\n"
+            else:
+                if value.is_of_a_kind(combined)[1] == myHand[0][0]:
+                    return "DISCARD:" + myHand[1] + '\n'
+                if value.is_of_a_kind(combined)[1] == myHand[1][0]:
+                    return "DISCARD:" + myHand[0] + '\n'
         
-        return "CALL\n"
+        if(myHand[0][0] < myHand[1][0]):
+            return "DISCARD:" + myHand[0] + '\n'
+        
+        if(myHand[0][0] > myHand[1][0]):
+            return "DISCARD:" + myHand[1] + '\n'
+        
+        return "CHECK\n"
         
     else:
         
+        limit = 10
+        
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) == 6 or value.is_of_a_kind(combined)[0] == 7: #full house and higher
+            limit = 200
+        
+        elif value.is_of_a_kind(combined)[0] == 3: #triple
+            if myHand[0][0] == value.is_of_a_kind(combined)[1] or myHand[1][0] == value.is_of_a_kind(combined)[1]:
+                limit = 200
+            else:
+                limit = 70
+                    
+                    
+        elif value.is_full_house(combined)[0] == 2: #two pair
+            if myHand[0][0] == myHand[1][0]:
+                if rank[myHand[0][0]] > max(rank(board[0][0]), rank(board[1][0]), rank(board[2][0])):
+                    limit = 200
+                else:
+                    limit = 80
+            result = value.is_full_house(combined)
+            if (result[1][0] == myHand[0][0] and result[1][1] == myHand[1][0]) or (result[1][1] == myHand[0][0] and result[1][0] == myHand[1][0]):
+                limit = 200
+            elif (result[1][0] == myHand[0][0] or result[1][0] == myHand[1][0]):
+                limit = 200
+            elif (result[1][0] == myHand[0][0] or result[1][0] == myHand[1][0]):
+                limit = 100
+            else:
+                limit = 40
+
+        elif value.is_of_a_kind(combined)[0] == 1: #one pair
+            if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
+                limit = min(6*myHand[0][0]+(4-rank(myHand[0][0])),100)
+            elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
+                limit = min(6*myHand[1][0]+(4-rank(myHand[1][0])),100)
+            else:
+                limit = 10
+
+        else:
+            limit = 5 + max(myHand[0][0], myHand[1][0])
+
+        if value.count_same_suit(combined)[0] == 4:
+            the_suit = value.count_same_suit(combined)[1]
+            if myHand[0][1] == myHand[1][1] == the_suit:
+                limit = 90
+            elif myHand[0][1] == the_suit:
+                if myHand[0][0] >= 13: #A or K
+                    limit = 60
+                elif myHand[0][0] >= 9:
+                    limit = 40
+                else:
+                    limit = 15
+            elif myHand[1][1] == the_suit:
+                if myHand[1][0] >= 13: #A or K
+                    limit = 60
+                elif myHand[1][0] >= 9:
+                    limit = 40
+                else:
+                    limit = 15
+
+        if value.double_sided_straight(combined) != False:
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0] <= low_card + 3 and low_card <= myHand[1] <= low_card + 3): #both cards
+                limit = 50
+            elif(low_card <= myHand[0] <= low_card + 3 or low_card <= myHand[1] <= low_card + 3): #one card
+                limit = 25
+                
+        elif value.hole_straight(combined) != False:
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
+                limit = 30
+            elif(low_card <= myHand[0][0] <= low_card + 4 or low_card <= myHand[1][0] <= low_card + 4): #one card
+                limit = 15
+
         return "CALL\n"
