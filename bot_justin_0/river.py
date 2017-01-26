@@ -62,7 +62,7 @@ def getAction(myHand, data):
                 for i in boardCards:
                     if pair_card<i:
                         rank+=1
-                limit=6*pair_card+(4-rank)*40
+                limit=6*pair_card+(5-rank)*40
                 if limit>200:
                     limit=200
         else:

@@ -81,11 +81,14 @@ def is_full_house(hand):#for full house or 2 pair
         if 3 in list_counts:
             return [6,card_dict[house]]
         elif twocount>=4:
+            two_pairs=[]
             for i in range(5):
                 if list_counts[i]==2:
-                    if card_dict[list_cards[i]]>current_max:
-                        current_max=card_dict[list_cards[i]]
-            return [2, current_max]
+                    if card_dict[list_cards[i]] not in two_pairs:
+                        two_pairs.append(card_dict[list_cards[i]])
+                        two_pairs.sort()
+                        two_pairs.reverse()
+            return [2, two_pairs]
     elif threecount>=6:
         for i in range(5):
             if list_counts[i]==3:
@@ -227,6 +230,7 @@ def hole_straight(hand): #checks if we have a 4-card, straight with a hole (e.g.
             return i
     return False
     
-#new='NEWHAND 10 true Ah Ac 200 200 20.000000'
-#get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
-#print (get_full_hand(get,new))
+new='NEWHAND 10 true Ah Kc 200 200 20.000000'
+get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
+x=get_full_hand(get,new)
+print (is_full_house(x))
