@@ -17,7 +17,8 @@ straight_flush = 16.0
 
 def get_full_hand(data, newhand):
     x=data.split()
-    y=newhand.split()
+    y=newhand
+    #y=newhand.split()
     hand=y[3:5]
     num_board=x[2]
     full_hand=hand+x[3:((int(num_board))+3)]
