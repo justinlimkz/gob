@@ -14,13 +14,17 @@ def canDoThis(action, data):
     return False
 
 def getAction(myHand, data):
-    packet = data.split
+    packet = data.split()
     numBoardCards = int(packet[2])
     boardCards = packet[3]
     numLastActions = int(packet[2+numBoardCards+1])
     numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
     
     limit=0
+    minBet = 0
+    maxBet = 0
+    minRaise = 0
+    maxRaise = 0    
     
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
         if packet[i][0:len("BET")] == "BET":

@@ -26,10 +26,7 @@ def getAction(myHand, data):
     
     board = packet[3:3+numBoardCards]
     combined = myHand
-    print combined
     combined.extend(board)
-    print board
-    print combined
     
     if canDoThis("DISCARD", data):
         #If royal flush or straight flush or 4 of a kind or full house
