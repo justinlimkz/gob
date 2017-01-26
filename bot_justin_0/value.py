@@ -228,7 +228,7 @@ def hole_straight(hand): #checks if we have a 4-card, straight with a hole (e.g.
             return i
     return False
     
-new='NEWHAND 10 true Ah Kc 200 200 20.000000'
-get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
-x=get_full_hand(get,new)
-print (is_full_house(x))
+#new='NEWHAND 10 true Ah Kc 200 200 20.000000'
+#get='GETACTION 30 4 As Ks Qh Qd 3 CHECK:two CHECK:one DEAL:RIVER 2 CHECK BET:2:30 19.997999999999998'
+#x=get_full_hand(get,new)
+#print (is_full_house(x))
