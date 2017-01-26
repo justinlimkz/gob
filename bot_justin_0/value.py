@@ -17,11 +17,8 @@ straight_flush = 16.0
 
 def get_full_hand(data, newhand):
     x=data.split()
-    y=newhand
-    #y=newhand.split()
-    hand=y[3:5]
     num_board=x[2]
-    full_hand=hand+x[3:((int(num_board))+3)]
+    full_hand=newhand+x[3:((int(num_board))+3)]
     return full_hand
 
 def is_of_a_kind(hand):#for 2,3,4 of a kind
