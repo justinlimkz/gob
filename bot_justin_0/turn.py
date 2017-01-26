@@ -62,5 +62,8 @@ def getAction(myHand, data):
         limit = 100     
     if value.hole_straight(boardCards) != False:
         limit = 60
+        
+        
+    return "CHECK\n"
                 
     
