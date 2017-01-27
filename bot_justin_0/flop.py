@@ -26,8 +26,7 @@ def getAction(myHand, data):
     numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
     
     board = packet[3:3+numBoardCards]
-    combined = myHand
-    combined.extend(board)
+    combined = myHand+board
     
     if canDoThis("DISCARD", data):
         if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined)[0] == 6 or value.is_of_a_kind(combined)[0] == 7:
@@ -127,7 +126,7 @@ def getAction(myHand, data):
         
         limit = 10
         
-        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) == 6 or value.is_of_a_kind(combined)[0] == 7: #full house and higher
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined)[0] == 6 or value.is_of_a_kind(combined)[0] == 7: #full house and higher
             limit = 200
         
         elif value.is_of_a_kind(combined)[0] == 3: #triple
@@ -198,6 +197,7 @@ def getAction(myHand, data):
                 limit = 15
 
         #print(limit) ##########
+        print str(limit) + '\n\n'
 
         for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
             if packet[i][0:len("BET")] == "BET":
@@ -274,6 +274,8 @@ def getAction(myHand, data):
         if canDoThis("CALL", data):
 
             if pot > limit and canDoThis("FOLD", data):
+                if canDoThis("CHECK", data):
+                    return "CHECK\n"
                 return "FOLD\n"
             return "CALL\n"
     

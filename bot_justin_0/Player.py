@@ -62,7 +62,6 @@ class Player:
                                     myHand[0] = discard[2]
                                 else:
                                     myHand[1] = discard[2]
-                                                
                     action = flop.getAction(myHand, data)
                 elif numBoardCards == 4:
                     packet = data.split()
