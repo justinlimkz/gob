@@ -1,4 +1,5 @@
 import value
+import random
 
 def canDoThis(action, data):
     packet = data.split()
@@ -181,82 +182,88 @@ def getAction(myHand, data):
         return "CALL\n"
     
     else:
-        return "CALL\n"
-        limit = 0
+        limit = 10
         
-        hand = value.get_full_hand(data, myHand)
-        royal_check = value.is_royal(hand)
-        full_value = value.is_full_house(hand)
-        pair_value = value.is_of_a_kind(hand)
-        flush_value = value.is_flush(hand)
-        straight_value = value.is_straight(hand)
-        high_value = value.high(hand)
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined)[0] == 6 or value.is_of_a_kind(combined)[0] == 7: #full house and higher
+            limit = 200
         
-        '''
-        if royal_check[0] == 9 or royal_check[0] == 8 or pair_value[0] == 7 or full_value[0] == 6 or flush_value[0] == 5 or straight_value[0] == 4:
-            return "RAISE:200\n" #Define what is meant by "lead in"
-        if pair_value[0] == 3 or full_value[0] == 2: #Triple or Two Pair
-            return "RAISE:200\n"
-        '''
-        
-        
-        if pair_value[0] == 1: #Pair
-            if value.count_same_suit(boardCards)[0] == 3 or value.double_sided_straight(boardCards) != False:
-                limit = limit*.75
-            pair_card = value.is_of_a_kind(hand)[1]
-            rank = 1
-            for i in boardCards:
-                if pair_card < i:
-                    rank += 1
-            limit = min(6*pair_card + (4-rank)*50, 200)
-        else:
-            limit = 20
-        if high_value[0] == 0: #High Card
-            limit = (5 + value.high(hand)[1])*2
-        
-        
-        
-        if value.count_same_suit(combined)[0] == 4:
-            if value.count_same_suit(combined)[1] == suit[0] and value.count_same_suit(combined)[1] == suit[1]:
-                limit = 60
-            elif value.count_same_suit(combined)[1] == suit[0] or value.count_same_suit(combined)[1] == suit[1]:
-                if value.high(combined)[1] >= 13:
-                    limit = 120
-                elif value.high(combined)[1] >= 9 and value.high(combined)[1] <=12:
-                    limit = 80
+        elif value.is_of_a_kind(combined)[0] == 3: #triple
+            if myHand[0][0] == value.is_of_a_kind(combined)[1] or myHand[1][0] == value.is_of_a_kind(combined)[1]:
+                limit = 200
+            else:
+                limit = 70
+                    
+                    
+        elif value.is_full_house(combined)[0] == 2: #two pair
+            if myHand[0][0] == myHand[1][0]:
+                if rank[myHand[0][0]] > max(rank[board[0][0]], rank[board[1][0]], rank[board[2][0]]):
+                    limit = 200
                 else:
-                    limit = 30
-    
-    
-    
+                    limit = 80
+            result = value.is_full_house(combined)
+            if (result[1][0] == myHand[0][0] and result[1][1] == myHand[1][0]) or (result[1][1] == myHand[0][0] and result[1][0] == myHand[1][0]):
+                limit = 200
+            elif (result[1][0] == myHand[0][0] or result[1][0] == myHand[1][0]):
+                limit = 200
+            elif (result[1][0] == myHand[0][0] or result[1][0] == myHand[1][0]):
+                limit = 100
+            else:
+                limit = 40
+
+        elif value.is_of_a_kind(combined)[0] == 1: #one pair
+            if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
+                limit = min(6*rank[myHand[0][0]]+(4-rank[myHand[0][0]]),100)
+            elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
+                limit = min(6*rank[myHand[1][0]]+(4-rank[myHand[1][0]]),100)
+            else:
+                limit = 10
+
+        else:
+            limit = 5 + max(rank[myHand[0][0]], rank[myHand[1][0]])
+
+        if value.count_same_suit(combined)[0] == 4:
+            the_suit = value.count_same_suit(combined)[1]
+            if myHand[0][1] == myHand[1][1] == the_suit:
+                limit = 90
+            elif myHand[0][1] == the_suit:
+                if myHand[0][0] >= 13: #A or K
+                    limit = 60
+                elif myHand[0][0] >= 9:
+                    limit = 40
+                else:
+                    limit = 15
+            elif myHand[1][1] == the_suit:
+                if myHand[1][0] >= 13: #A or K
+                    limit = 60
+                elif myHand[1][0] >= 9:
+                    limit = 40
+                else:
+                    limit = 15
+
         if value.double_sided_straight(combined) != False:
-            limit = 100     
-        if value.hole_straight(combined) != False:
-            limit = 60
-        
-        
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0] <= low_card + 3 and low_card <= myHand[1] <= low_card + 3): #both cards
+                limit = 50
+            elif(low_card <= myHand[0] <= low_card + 3 or low_card <= myHand[1] <= low_card + 3): #one card
+                limit = 25
+                
+        elif value.hole_straight(combined) != False:
+            low_card = value.double_sided_straight(combined)
+            if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
+                limit = 30
+            elif(low_card <= myHand[0][0] <= low_card + 4 or low_card <= myHand[1][0] <= low_card + 4): #one card
+                limit = 15
+
+        #print(limit) ##########
+        print str(limit) + '\n\n'
+
         for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
             if packet[i][0:len("BET")] == "BET":
                 minBet = int(packet[i].split(":")[1])
                 maxBet = int(packet[i].split(":")[2])
-                bet = max(limit*(0.75), minBet)
-                bet = min(bet, maxBet)
-                bet = int(bet)
-                return "BET:" + str(bet) + "\n"
-            
             if packet[i][0:len("RAISE")] == "RAISE":	
                 minRaise = int(packet[i].split(":")[1])
                 maxRaise = int(packet[i].split(":")[2])
-                if minRaise > limit and canDoThis("FOLD", data):
-                    if canDoThis("CHECK\n", data):
-                        return "CHECK\n"
-                    return "FOLD\n";
-                else:
-                    bet = minRaise
-                    if num[0] == num[1]:
-                        bet = 30+5*num[0]
-                    return "RAISE:" + str(bet) + "\n"	
-        
             if packet[i][0:len("CALL")] == "CALL":
                 pot = 0
                 if packet[2+numBoardCards+1+numLastActions][0:len("POST")] == "POST":
@@ -265,17 +272,66 @@ def getAction(myHand, data):
                     pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
                 elif packet[2+numBoardCards+1+numLastActions][0:len("RAISE")] == "RAISE":
                     pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
-                
-                if pot > limit and canDoThis("FOLD", data):
-                    if canDoThis("CHECK\n", data):
-                        return "CHECK\n"
-                    return "FOLD\n"
-                return "CALL\n"
-        
-            if packet[i][0:len("CHECK")] == "CHECK":
-                return "CHECK\n"
             
+
+        rng = random.uniform(0, 100)
+        limit += 100
+        #Priority in order: BET, RAISE, CALL, CHECK
+
+        if canDoThis("BET", data):
+            multiplier = 0.75 #default?
+            if 0<rng<=5:
+                multiplier = 1
+            if 5<rng<=10:
+                multiplier = 0.75
+            if 10<rng<=20:
+                multiplier = 0.50
+            if 20<rng<=30:
+                multiplier = 0.33
+            if 30<rng<=45:
+                multiplier = 0.25
+            if 45<rng<=55:
+                multiplier = 0 #minBet
+            if 55<rng<=100:
+                if canDoThis("CHECK\n", data):
+                    return "CHECK\n"
+        
+            bet = max(limit*(multiplier), minBet)
+            bet = min(bet, maxBet)
+            bet = int(bet)
+            return "BET:" + str(bet) + "\n"
+
+        if canDoThis("RAISE", data):
+            multiplier = 1
+            if 0<rng<=5:
+                multiplier = 1
+            if 5<rng<=10:
+                multiplier = 0.75
+            if 10<rng<=20:
+                multiplier = 0.50
+            if 20<rng<=30:
+                multiplier = 0.33
+            if 30<rng<=45:
+                multiplier = 0.25
+            if 45<rng<=55:
+                multiplier = 0 #minRaise
+            if 55<rng<=100:
+                if canDoThis("CHECK", data):
+                    return "CHECK\n"
+        
+            if minRaise <= limit:
+                bet = max(limit*multiplier, minRaise)
+                bet = min(bet, maxRaise)
+                bet = int(bet)
+                return "RAISE:" + str(bet) + "\n"    
+
+        if canDoThis("CALL", data):
+            if pot <= limit:
+                return "CALL\n"
+
+        if packet[i][0:len("CHECK")] == "CHECK":
+            return "CHECK\n"
+        
         return "CHECK\n";
-    
                 
     

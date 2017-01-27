@@ -41,6 +41,7 @@ class Player:
             
             
             word = data.split()[0]
+            
             if word == "NEWHAND":
                 myHand = [data.split()[3], data.split()[4]]
                 print myHand

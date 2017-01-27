@@ -217,7 +217,7 @@ def getAction(myHand, data):
             
 
         rng = random.uniform(0, 100)
-
+        limit += 100
         #Priority in order: BET, RAISE, CALL, CHECK
 
         if canDoThis("BET", data):
@@ -237,14 +237,14 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK\n", data):
                     return "CHECK\n"
-            
+        
             bet = max(limit*(multiplier), minBet)
             bet = min(bet, maxBet)
             bet = int(bet)
             return "BET:" + str(bet) + "\n"
 
         if canDoThis("RAISE", data):
-
+            multiplier = 1
             if 0<rng<=5:
                 multiplier = 1
             if 5<rng<=10:
@@ -260,26 +260,18 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
-            
-            if minRaise > limit and canDoThis("FOLD", data): #checkfold
-                if canDoThis("CHECK", data):
-                    return "CHECK\n"
-                return "FOLD\n";
-            else:
-                bet = minRaise
-                #if num[0] == num[1]:
- #                   bet = 30+5*num[0]
-                return "RAISE:" + str(bet) + "\n"	
-    
-        if canDoThis("CALL", data):
+        
+            if minRaise <= limit:
+                bet = max(limit*multiplier, minRaise)
+                bet = min(bet, maxRaise)
+                bet = int(bet)
+                return "RAISE:" + str(bet) + "\n"    
 
-            if pot > limit and canDoThis("FOLD", data):
-                if canDoThis("CHECK", data):
-                    return "CHECK\n"
-                return "FOLD\n"
-            return "CALL\n"
-    
+        if canDoThis("CALL", data):
+            if pot <= limit:
+                return "CALL\n"
+
         if packet[i][0:len("CHECK")] == "CHECK":
             return "CHECK\n"
-            
+        
         return "CHECK\n";
