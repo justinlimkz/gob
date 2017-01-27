@@ -154,9 +154,9 @@ def getAction(myHand, data):
 
         elif value.is_of_a_kind(combined)[0] == 1: #one pair
             if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[0][0]+(4-rank[myHand[0][0]]),50)
+                limit = min(6*rank[myHand[0][0]]+(4-rank[myHand[0][0]]),50)
             elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[1][0]+(4-rank[myHand[1][0]]),50)
+                limit = min(6*rank[myHand[1][0]]+(4-rank[myHand[1][0]]),50)
             else:
                 limit = 10
 
