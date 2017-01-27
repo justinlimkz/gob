@@ -110,6 +110,7 @@ def is_flush(hand):
     list_cards.sort()
     suits=['c','d','s','h']
     for i in suits:
+        count = 0
         for suit in list_suits:
             if suit==i:
                 count+=1

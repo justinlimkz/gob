@@ -106,6 +106,7 @@ def getAction(myHand, data):
                     return "DISCARD:" + myHand[0] + '\n'
 
         if value.hole_straight(combined) != False:
+            low_card = value.hole_straight(combined)
             if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
                 if(9 > myHand[0][0] < myHand[1][0]):
                     return "DISCARD:" + myHand[0] + '\n'
@@ -155,7 +156,7 @@ def getAction(myHand, data):
                 else:
                     return "DISCARD:" + myHand[0] + '\n'
         
-        if value.is_full_house(combined)[0] == 1: #pair
+        if value.is_of_a_kind(combined)[0] == 1: #pair
             if myHand[0][0] == myHand[1][0]: #pockets
                 return "CHECK\n"
             elif myHand[0][0] in [board[0][0], board[1][0], board[2][0], board[3][0]]:

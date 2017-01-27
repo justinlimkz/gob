@@ -88,6 +88,8 @@ def getAction(myHand, data):
             minRaise = int(packet[i].split(":")[1])
             maxRaise = int(packet[i].split(":")[2])
             if minRaise > limit and canDoThis("FOLD", data):
+                if canDoThis("CHECK", data):   
+                    return "CHECK\n"
                 return "FOLD\n";
             else:
                 bet = minRaise

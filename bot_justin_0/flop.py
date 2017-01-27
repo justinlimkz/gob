@@ -29,8 +29,8 @@ def getAction(myHand, data):
     combined.extend(board)
     
     if canDoThis("DISCARD", data):
-        #If royal flush or straight flush or 4 of a kind or full house
-        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined) == 6 or value.is_of_a_kind(combined)[0] == 7:
+        if value.is_flush(combined) != NO or value.is_straight(combined) != NO or value.is_full_house(combined)[0] == 6 or value.is_of_a_kind(combined)[0] == 7:
+            
             if value.is_of_a_kind(combined)[0] == 7 and myHand[0][0] != myHand[1][0]: 
                 #four of a kind but only uses one card in hand
                 if myHand[0][0] == board[0][0]:
@@ -39,7 +39,7 @@ def getAction(myHand, data):
                     return "DISCARD:" + myHand[0] + '\n'
             else:
                 return "CHECK\n"
-                
+              
         if value.count_same_suit(combined)[0] == 4:
             suit = value.count_same_suit(combined)[1]
             if myHand[0][1] == suit and myHand[1][1] == suit:
@@ -59,6 +59,7 @@ def getAction(myHand, data):
                 return "DISCARD:" + myHand[0] + '\n'
 
         if value.hole_straight(combined) != False:
+            low_card = value.hole_straight(combined)
             if(low_card <= myHand[0][0] <= low_card + 4 and low_card <= myHand[1][0] <= low_card + 4):#both cards
                 if(9 > myHand[0][0] < myHand[1][0]):
                     return "DISCARD:" + myHand[0] + '\n'
@@ -76,7 +77,7 @@ def getAction(myHand, data):
                     return "DISCARD:" + myHand[0] + '\n'
                 else:
                     return "CHECK\n"
-
+        
         if value.is_of_a_kind(combined)[0] == 3:
             if myHand[0][0] != myHand[1][0]:
                 if myHand[0][0] == value.is_of_a_kind(combined)[1]:
@@ -88,7 +89,7 @@ def getAction(myHand, data):
         
         if value.is_full_house(combined)[0] == 2: #two pair
             if myHand[0][0] == myHand[1][0]:
-                if rank[myHand[0][0]] < min(rank(board[0][0]), rank(board[1][0]), rank(board[2][0])):
+                if rank[myHand[0][0]] < min(rank[board[0][0]], rank[board[1][0]], rank[board[2][0]]):
                     return "DISCARD:" + myHand[0] + '\n'
                 else:
                     return "CHECK\n"
@@ -102,21 +103,21 @@ def getAction(myHand, data):
     
         if value.is_of_a_kind(combined)[0] == 1:
             cards_sorted = sorted(combined, key=lambda x: x[0])
-            if(myHand[0][0] == myHand[1][0]):
+            if myHand[0][0] == myHand[1][0]:
                 if(myHand[0][0] == cards_sorted[0][0]):
                     return "DISCARD:" + myHand[0] + '\n'
                 else:
                     return "CHECK\n"
             else:
-                if value.is_of_a_kind(combined)[1] == myHand[0][0]:
+                if value.is_of_a_kind(combined)[1] == rank[myHand[0][0]]:
                     return "DISCARD:" + myHand[1] + '\n'
-                if value.is_of_a_kind(combined)[1] == myHand[1][0]:
+                if value.is_of_a_kind(combined)[1] == rank[myHand[1][0]]:
                     return "DISCARD:" + myHand[0] + '\n'
         
-        if(myHand[0][0] < myHand[1][0]):
+        if rank[myHand[0][0]] < rank[myHand[1][0]]:
             return "DISCARD:" + myHand[0] + '\n'
         
-        if(myHand[0][0] > myHand[1][0]):
+        if rank[myHand[0][0]] > rank[myHand[1][0]]:
             return "DISCARD:" + myHand[1] + '\n'
         
         return "CHECK\n"
@@ -137,7 +138,7 @@ def getAction(myHand, data):
                     
         elif value.is_full_house(combined)[0] == 2: #two pair
             if myHand[0][0] == myHand[1][0]:
-                if rank[myHand[0][0]] > max(rank(board[0][0]), rank(board[1][0]), rank(board[2][0])):
+                if rank[myHand[0][0]] > max(rank[board[0][0]], rank[board[1][0]], rank[board[2][0]]):
                     limit = 200
                 else:
                     limit = 80
@@ -153,9 +154,9 @@ def getAction(myHand, data):
 
         elif value.is_of_a_kind(combined)[0] == 1: #one pair
             if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[0][0]+(4-rank(myHand[0][0])),100)
+                limit = min(6*myHand[0][0]+(4-rank[myHand[0][0]]),100)
             elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[1][0]+(4-rank(myHand[1][0])),100)
+                limit = min(6*myHand[1][0]+(4-rank[myHand[1][0]]),100)
             else:
                 limit = 10
 
