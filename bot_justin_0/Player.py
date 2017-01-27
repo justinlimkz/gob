@@ -31,7 +31,7 @@ class Player:
             # Here is where you should implement code to parse the packets from
             # the engine and act on it. We are just printing it instead.
             print data
-			
+            
             # When appropriate, reply to the engine with a legal action.
             # The engine will ignore all spurious responses.
             # The engine will also check/fold for you if you return an
@@ -42,18 +42,46 @@ class Player:
             
             word = data.split()[0]
             if word == "NEWHAND":
-            	myHand = [data.split()[3], data.split()[4]]
-            	print myHand
+                myHand = [data.split()[3], data.split()[4]]
+                print myHand
             if word == "GETACTION":
-            	numBoardCards = int(data.split()[2]) 
-            	if numBoardCards == 0:
-            		action = preflop.getAction(myHand, data)
-            	elif numBoardCards == 3:
-            		action = flop.getAction(myHand, data)
-            	elif numBoardCards == 4:
-            		action = turn.getAction(myHand, data)
-            	else:
-            		action = river.getAction(myHand, data)
+                numBoardCards = int(data.split()[2]) 
+                if numBoardCards == 0:
+                    action = preflop.getAction(myHand, data)
+                elif numBoardCards == 3:
+                    packet = data.split()
+                    
+                    numBoardCards = int(packet[2])
+                    numLastActions = int(packet[2+numBoardCards+1])
+                    
+                    for i in range(2+numBoardCards+1+1, 2+numBoardCards+1+numLastActions+1):
+                        if packet[i][0:len("DISCARD")] == "DISCARD":
+                            discard = packet[i].split(":")
+                            if len(discard) > 2:
+                                if discard[1] == myHand[0]:
+                                    myHand[0] = discard[2]
+                                else:
+                                    myHand[1] = discard[2]
+                                                
+                    action = flop.getAction(myHand, data)
+                elif numBoardCards == 4:
+                    packet = data.split()
+                    
+                    numBoardCards = int(packet[2])
+                    numLastActions = int(packet[2+numBoardCards+1])
+                    
+                    for i in range(2+numBoardCards+1+1, 2+numBoardCards+1+numLastActions+1):
+                        if packet[i][0:len("DISCARD")] == "DISCARD":
+                            discard = packet[i].split(":")
+                            if len(discard) > 2:
+                                if discard[1] == myHand[0]:
+                                    myHand[0] = discard[2]
+                                else:
+                                    myHand[1] = discard[2]
+                    
+                    action = turn.getAction(myHand, data)
+                else:
+                    action = river.getAction(myHand, data)
                 s.send(action)
             elif word == "REQUESTKEYVALUES":
                 # At the end, the engine will allow your bot save key/value pairs.

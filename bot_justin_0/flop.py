@@ -154,14 +154,14 @@ def getAction(myHand, data):
 
         elif value.is_of_a_kind(combined)[0] == 1: #one pair
             if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[0][0]+(4-rank[myHand[0][0]]),100)
+                limit = min(6*rank[myHand[0][0]]+(4-rank[myHand[0][0]]),100)
             elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*myHand[1][0]+(4-rank[myHand[1][0]]),100)
+                limit = min(6*rank[myHand[1][0]]+(4-rank[myHand[1][0]]),100)
             else:
                 limit = 10
 
         else:
-            limit = 5 + max(myHand[0][0], myHand[1][0])
+            limit = 5 + max(rank[myHand[0][0]], rank[myHand[1][0]])
 
         if value.count_same_suit(combined)[0] == 4:
             the_suit = value.count_same_suit(combined)[1]
@@ -196,4 +196,42 @@ def getAction(myHand, data):
             elif(low_card <= myHand[0][0] <= low_card + 4 or low_card <= myHand[1][0] <= low_card + 4): #one card
                 limit = 15
 
-        return "CALL\n"
+        for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
+            if packet[i][0:len("BET")] == "BET":
+                minBet = int(packet[i].split(":")[1])
+                maxBet = int(packet[i].split(":")[2])
+                bet = max(limit*(0.75), minBet)
+                bet = min(bet, maxBet)
+                bet = int(bet)
+                return "BET:" + str(bet) + "\n"
+            
+            if packet[i][0:len("RAISE")] == "RAISE":	
+                minRaise = int(packet[i].split(":")[1])
+                maxRaise = int(packet[i].split(":")[2])
+                if minRaise > limit and canDoThis("FOLD", data):
+                    if canDoThis("CHECK\n", data):
+                        return "CHECK\n"
+                    return "FOLD\n";
+                else:
+                    bet = minRaise
+                    if num[0] == num[1]:
+                        bet = 30+5*num[0]
+                    return "RAISE:" + str(bet) + "\n"	
+        
+            if packet[i][0:len("CALL")] == "CALL":
+                pot = 0
+                if packet[2+numBoardCards+1+numLastActions][0:len("POST")] == "POST":
+                    pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
+                elif packet[2+numBoardCards+1+numLastActions][0:len("BET")] == "BET":
+                    pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
+                elif packet[2+numBoardCards+1+numLastActions][0:len("RAISE")] == "RAISE":
+                    pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
+                
+                if pot > limit and canDoThis("FOLD", data):
+                    return "FOLD\n"
+                return "CALL\n"
+        
+            if packet[i][0:len("CHECK")] == "CHECK":
+                return "CHECK\n"
+            
+        return "CHECK\n";
