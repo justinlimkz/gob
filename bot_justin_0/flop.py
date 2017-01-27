@@ -197,7 +197,7 @@ def getAction(myHand, data):
                 limit = 15
 
         #print(limit) ##########
-        print str(limit) + '\n\n'
+        print (str(limit) + '\n\n')
 
         for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
             if packet[i][0:len("BET")] == "BET":

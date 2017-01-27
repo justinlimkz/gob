@@ -59,7 +59,7 @@ def getAction(myHand, data):
             elif packet[2+numBoardCards+1+numLastActions][0:len("RAISE")] == "RAISE":
                 pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
         
-    print limit
+    print (limit)
     rng = random.uniform(0, 100)
 
     #Priority in order: BET, RAISE, CALL, CHECK
