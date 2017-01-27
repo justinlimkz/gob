@@ -25,12 +25,12 @@ class Player:
             data = f_in.readline().strip()
             # If data is None, connection has closed.
             if not data:
-                print "Gameover, engine disconnected."
+                print ("Gameover, engine disconnected.")
                 break
 
             # Here is where you should implement code to parse the packets from
             # the engine and act on it. We are just printing it instead.
-            print data
+            print (data)
             
             # When appropriate, reply to the engine with a legal action.
             # The engine will ignore all spurious responses.
@@ -44,7 +44,7 @@ class Player:
             
             if word == "NEWHAND":
                 myHand = [data.split()[3], data.split()[4]]
-                print myHand
+                print (myHand)
             if word == "GETACTION":
                 numBoardCards = int(data.split()[2]) 
                 if numBoardCards == 0:
@@ -97,11 +97,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Create a socket connection to the engine.
-    print 'Connecting to %s:%d' % (args.host, args.port)
+    print ('Connecting to %s:%d' % (args.host, args.port))
     try:
         s = socket.create_connection((args.host, args.port))
     except socket.error as e:
-        print 'Error connecting! Aborting'
+        print ('Error connecting! Aborting')
         exit()
 
     bot = Player()
