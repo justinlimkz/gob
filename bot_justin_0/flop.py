@@ -154,9 +154,9 @@ def getAction(myHand, data):
 
         elif value.is_of_a_kind(combined)[0] == 1: #one pair
             if myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*rank[myHand[0][0]]+(4-rank[myHand[0][0]]),100)
+                limit = min(6*myHand[0][0]+(4-rank[myHand[0][0]]),50)
             elif myHand[0][0] in [board[0][0], board[1][0], board[2][0]]:
-                limit = min(6*rank[myHand[1][0]]+(4-rank[myHand[1][0]]),100)
+                limit = min(6*myHand[1][0]+(4-rank[myHand[1][0]]),50)
             else:
                 limit = 10
 
@@ -237,11 +237,13 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK\n", data):
                     return "CHECK\n"
-        
+
+            
             bet = max(limit*(multiplier), minBet)
             bet = min(bet, maxBet)
             bet = int(bet)
-            return "BET:" + str(bet) + "\n"
+            if minBet <= limit:
+                return "BET:" + str(bet) + "\n"
 
         if canDoThis("RAISE", data):
             multiplier = 1
@@ -261,10 +263,11 @@ def getAction(myHand, data):
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
         
+            
+            bet = max(limit*multiplier, minRaise)
+            bet = min(bet, maxRaise)
+            bet = int(bet)
             if minRaise <= limit:
-                bet = max(limit*multiplier, minRaise)
-                bet = min(bet, maxRaise)
-                bet = int(bet)
                 return "RAISE:" + str(bet) + "\n"    
 
         if canDoThis("CALL", data):
