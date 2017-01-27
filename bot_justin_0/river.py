@@ -1,4 +1,5 @@
 import value
+import random
 
 rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 
@@ -81,20 +82,9 @@ def getAction(myHand, data):
         if packet[i][0:len("BET")] == "BET":
             minBet = int(packet[i].split(":")[1])
             maxBet = int(packet[i].split(":")[2])
-            bet = max(limit*(0.75), minBet)
-            bet = min(bet, maxBet)
-            bet = int(bet)
-            return "BET:" + str(bet) + "\n"
-        if packet[i][0:len("RAISE")] == "RAISE":    
+        if packet[i][0:len("RAISE")] == "RAISE":	
             minRaise = int(packet[i].split(":")[1])
             maxRaise = int(packet[i].split(":")[2])
-            if minRaise > limit and canDoThis("FOLD", data):
-                if canDoThis("CHECK", data):   
-                    return "CHECK\n"
-                return "FOLD\n";
-            else:
-                bet = minRaise
-                
         if packet[i][0:len("CALL")] == "CALL":
             pot = 0
             if packet[2+numBoardCards+1+numLastActions][0:len("POST")] == "POST":
@@ -103,14 +93,72 @@ def getAction(myHand, data):
                 pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
             elif packet[2+numBoardCards+1+numLastActions][0:len("RAISE")] == "RAISE":
                 pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
-                
-            if pot > limit and canDoThis("FOLD", data):
-                if canDoThis("CHECK\n", data):
-                    return "CHECK\n"
-                return "FOLD\n"
-            return "CALL\n"
         
-        if packet[i][0:len("CHECK")] == "CHECK":
-            return "CHECK\n"
-            
+
+    rng = random.uniform(0, 100)
+
+    #Priority in order: BET, RAISE, CALL, CHECK
+
+    if canDoThis("BET", data):
+        multiplier = 0.75 #default?
+        if 0<rng<=5:
+            multiplier = 1
+        if 5<rng<=10:
+            multiplier = 0.75
+        if 10<rng<=20:
+            multiplier = 0.50
+        if 20<rng<=30:
+            multiplier = 0.33
+        if 30<rng<=45:
+            multiplier = 0.25
+        if 45<rng<=55:
+            multiplier = 0 #minBet
+        if 55<rng<=100:
+            if canDoThis("CHECK\n", data):
+                return "CHECK\n"
+        
+        bet = max(limit*(multiplier), minBet)
+        bet = min(bet, maxBet)
+        bet = int(bet)
+        return "BET:" + str(bet) + "\n"
+
+    if canDoThis("RAISE", data):
+
+        if 0<rng<=5:
+            multiplier = 1
+        if 5<rng<=10:
+            multiplier = 0.75
+        if 10<rng<=20:
+            multiplier = 0.50
+        if 20<rng<=30:
+            multiplier = 0.33
+        if 30<rng<=45:
+            multiplier = 0.25
+        if 45<rng<=55:
+            multiplier = 0 #minRaise
+        if 55<rng<=100:
+            if canDoThis("CHECK", data):
+                return "CHECK\n"
+        
+        if minRaise > limit and canDoThis("FOLD", data): #checkfold
+            if canDoThis("CHECK", data):
+                return "CHECK\n"
+            return "FOLD\n";
+        else:
+            bet = minRaise
+            #if num[0] == num[1]:
+#                   bet = 30+5*num[0]
+            return "RAISE:" + str(bet) + "\n"	
+
+    if canDoThis("CALL", data):
+
+        if pot > limit and canDoThis("FOLD", data):
+            if canDoThis("CHECK", data):
+                return "CHECK\n"
+            return "FOLD\n"
+        return "CALL\n"
+
+    if packet[i][0:len("CHECK")] == "CHECK":
+        return "CHECK\n"
+        
     return "CHECK\n";
