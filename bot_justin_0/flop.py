@@ -274,7 +274,7 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
-                if(minRaise == maxRaise):
+                if(maxRaise - minRaise <= 25):
                     return "CALL\n"
         
             
@@ -285,7 +285,7 @@ def getAction(myHand, data):
                 return "RAISE:" + str(bet) + "\n"    
 
         if canDoThis("CALL", data):
-            if pot <= limit or minRaise == maxRaise:
+            if pot <= limit or maxRaise - minRaise <= 25:
                 return "CALL\n"
 
         return "CHECK\n";
