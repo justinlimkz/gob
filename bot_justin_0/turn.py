@@ -261,6 +261,7 @@ def getAction(myHand, data):
         maxBet = 1
         minRaise = 0
         maxRaise = 1
+        pot = 0
 
         for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
             if packet[i][0:len("BET")] == "BET":
@@ -270,7 +271,7 @@ def getAction(myHand, data):
                 minRaise = int(packet[i].split(":")[1])
                 maxRaise = int(packet[i].split(":")[2])
             if packet[i][0:len("CALL")] == "CALL":
-                pot = 0
+                
                 if packet[2+numBoardCards+1+numLastActions][0:len("POST")] == "POST":
                     pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
                 elif packet[2+numBoardCards+1+numLastActions][0:len("BET")] == "BET":
@@ -324,7 +325,7 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
-                if(maxRaise - minRaise <= 25):
+                if((maxRaise - minRaise <= 25 and pot>300-limit)):
                     return "CALL\n"
         
             bet = max(limit*multiplier, minRaise)
@@ -334,7 +335,7 @@ def getAction(myHand, data):
                 return "RAISE:" + str(bet) + "\n"    
 
         if canDoThis("CALL", data):
-            if pot <= limit or maxRaise - minRaise <= 25:
+            if pot <= limit or (maxRaise - minRaise <= 25 and pot>300-limit):
                 return "CALL\n"
         
         return "CHECK\n";
