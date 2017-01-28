@@ -90,6 +90,11 @@ def getAction(myHand, data):
     if num[0] == num[1]:
         limit *= 2.0'''
     
+    minBet = 0
+    maxBet = 1
+    minRaise = 0
+    maxRaise = 1
+    
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
         if packet[i][0:len("BET")] == "BET":
             minBet = int(packet[i].split(":")[1])
@@ -110,6 +115,8 @@ def getAction(myHand, data):
     rng = random.uniform(0, 100)
  #   limit += 100
     #Priority in order: BET, RAISE, CALL, CHECK
+
+    
 
     if canDoThis("BET", data):
         multiplier = 0.75 #default?
@@ -152,17 +159,16 @@ def getAction(myHand, data):
         if 55<rng<=100:
             if canDoThis("CHECK", data):
                 return "CHECK\n"
+            if(minRaise == maxRaise):
+                return "CALL\n"
         
         if minRaise <= limit:
             bet = max(limit*multiplier, minRaise)
             return "RAISE:" + str(int(bet)) + "\n"    
 
     if canDoThis("CALL", data):
-        if pot <= limit:
+        if pot <= limit or minRaise == maxRaise:
             return "CALL\n"
-
-    if packet[i][0:len("CHECK")] == "CHECK":
-        return "CHECK\n"
         
     return "CHECK\n";
         
