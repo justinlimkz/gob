@@ -299,7 +299,8 @@ def getAction(myHand, data):
             bet = max(limit*(multiplier), minBet)
             bet = min(bet, maxBet)
             bet = int(bet)
-            return "BET:" + str(bet) + "\n"
+            if minBet <= limit:
+                return "BET:" + str(bet) + "\n"
 
         if canDoThis("RAISE", data):
             multiplier = 1

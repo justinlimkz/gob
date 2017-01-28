@@ -41,8 +41,41 @@ def getAction(myHand, data):
            [57,52,49,46,44,41,39,39,38,38,57,39,37],
            [56,51,48,45,43,40,37,37,36,36,35,54,36],
            [55,51,47,44,42,39,37,35,34,34,33,32,50]]
+
     
-    limit = 6*max(num[0], num[1])
+
+    if num[1] > num[0]:
+        num[1],num[0] = num[0],num[1]
+
+    score = 0
+
+    if(suit[0] == suit[1]):
+        score = odds[14-num[1]][14-num[0]]
+    else:
+        score = odds[14-num[0]][14-num[1]]
+
+    limit = 2
+
+    if(score<=40):
+        limit = 2
+    elif(score<=50):
+        limit = 5
+    elif(score<=55):
+        limit = 15
+    elif(score<=58):
+        limit = 25
+    elif(score<=60):
+        limit = 50
+    elif(score<=63):
+        limit = 100
+    elif(score<=65):
+        limit = 150
+    elif(score<=100):
+        limit = 200
+        
+        
+    
+    '''limit = 6*max(num[0], num[1])
     
     if suit[0] == suit[1]:
         limit *= 1.5
@@ -55,7 +88,7 @@ def getAction(myHand, data):
     if abs(num[0]-num[1]) == 1:
         limit *= 1.4
     if num[0] == num[1]:
-        limit *= 2.0
+        limit *= 2.0'''
     
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
         if packet[i][0:len("BET")] == "BET":
@@ -99,7 +132,8 @@ def getAction(myHand, data):
         bet = max(limit*(multiplier), minBet)
         bet = min(bet, maxBet)
         bet = int(bet)
-        return "BET:" + str(bet) + "\n"
+        if minBet <= limit:
+            return "BET:" + str(bet) + "\n"
 
     if canDoThis("RAISE", data):
         multiplier = 1
