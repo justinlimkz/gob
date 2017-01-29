@@ -14,7 +14,7 @@ def canDoThis(action, data):
             return True
     return False
     
-def getAction(myHand, data):
+def getAction(myHand, data, times_all_in):
     packet = data.split()
     
     numBoardCards = int(packet[2])
@@ -25,8 +25,7 @@ def getAction(myHand, data):
     suit = [myHand[0][1], myHand[1][1]]
     currentCards = packet[2:2+numBoardCards]
     
-    if data.split()[4] == "POST:1:EzMoney" and abs(num[0]-num[1]) > 4 and suit[0] != suit[1] and max(num[0], num[1]) < 10:
-        return "FOLD\n"
+    
 
     odds =[[85,76,66,65,65,63,62,61,60,60,59,58,57],
            [65,82,63,63,62,60,58,58,57,56,55,54,53],
@@ -53,6 +52,10 @@ def getAction(myHand, data):
         score = odds[14-num[1]][14-num[0]]
     else:
         score = odds[14-num[0]][14-num[1]]
+
+    if data.split()[4] == "POST:1:EzMoney" and score<35:
+    #abs(num[0]-num[1]) > 4 and suit[0] != suit[1] and max(num[0], num[1]) < 10:
+        return ("FOLD\n" , times_all_in)
 
     limit = 2
 
@@ -90,10 +93,10 @@ def getAction(myHand, data):
     if num[0] == num[1]:
         limit *= 2.0'''
     
-    minBet = 0
-    maxBet = 1
-    minRaise = 0
-    maxRaise = 1
+    minBet = 99999
+    maxBet = -99999
+    minRaise = 99999
+    maxRaise = -99999
     pot = 0
     
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
@@ -112,12 +115,21 @@ def getAction(myHand, data):
             elif packet[2+numBoardCards+1+numLastActions][0:len("RAISE")] == "RAISE":
                 pot = int(packet[2+numBoardCards+1+numLastActions].split(":")[1])
         
-    print (limit)
+    #print (limit)
     rng = random.uniform(0, 100)
  #   limit += 100
     #Priority in order: BET, RAISE, CALL, CHECK
 
-    
+    if(pot < 50 and maxRaise - minRaise <= 10 ):
+        times_all_in += 1.0
+    else:
+        times_all_in -= 0.5
+
+    if(times_all_in >= 50.0):
+        if limit > 149:
+            return ("CALL\n" , times_all_in)
+        else:
+            return ("CHECK\n" , times_all_in)
 
     if canDoThis("BET", data):
         multiplier = 0.75 #default?
@@ -135,13 +147,13 @@ def getAction(myHand, data):
             multiplier = 0 #minBet
         if 55<rng<=100:
             if canDoThis("CHECK\n", data):
-                return "CHECK\n"
+                return ("CHECK\n" , times_all_in)
         
         bet = max(limit*(multiplier), minBet)
         bet = min(bet, maxBet)
         bet = int(bet)
         if minBet <= limit:
-            return "BET:" + str(bet) + "\n"
+            return ("BET:" + str(bet) + "\n" , times_all_in)
 
     if canDoThis("RAISE", data):
         multiplier = 1
@@ -159,17 +171,17 @@ def getAction(myHand, data):
             multiplier = 0 #minRaise
         if 55<rng<=100:
             if canDoThis("CHECK", data):
-                return "CHECK\n"
+                return ("CHECK\n" , times_all_in)
             if(maxRaise - minRaise <= 25):
-                return "CALL\n"
+                return ("CALL\n" , times_all_in)
         
         if minRaise <= limit:
             bet = max(limit*multiplier, minRaise)
-            return "RAISE:" + str(int(bet)) + "\n"    
+            return ("RAISE:" + str(int(bet)) + "\n"  , times_all_in)   
 
     if canDoThis("CALL", data):
         if pot <= limit or (maxRaise - minRaise <= 25 and pot>300-limit):
-            return "CALL\n"
+            return ("CALL\n" , times_all_in)
         
-    return "CHECK\n";
+    return ("CHECK\n" , times_all_in)
         

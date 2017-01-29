@@ -20,6 +20,9 @@ class Player:
         # Get a file-object for reading packets from the socket.
         # Using this ensures that you get exactly one packet per read.
         f_in = input_socket.makefile()
+        
+        times_all_in = 0.0
+        
         while True:
             # Block until the engine sends us a packet.
             data = f_in.readline().strip()
@@ -42,13 +45,18 @@ class Player:
             
             word = data.split()[0]
             
+            
             if word == "NEWHAND":
                 myHand = [data.split()[3], data.split()[4]]
                 print (myHand)
             if word == "GETACTION":
                 numBoardCards = int(data.split()[2]) 
                 if numBoardCards == 0:
-                    action = preflop.getAction(myHand, data)
+                    a = preflop.getAction(myHand, data, float(times_all_in))
+                    action = a[0]
+                    times_all_in = a[1]
+                
+                    print(str(times_all_in)+"\n\n\n")
                 elif numBoardCards == 3:
                     packet = data.split()
                     

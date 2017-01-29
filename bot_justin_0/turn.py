@@ -281,8 +281,11 @@ def getAction(myHand, data):
             
 
         rng = random.uniform(0, 100)
-        limit += 100
+ #       limit += 100
         #Priority in order: BET, RAISE, CALL, CHECK
+
+        #if(all_in_trigger):
+            
 
         if canDoThis("BET", data):
             multiplier = 0.75 #default?
