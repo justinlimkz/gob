@@ -92,10 +92,10 @@ def getAction(myHand, data):
     if num[0] == num[1]:
         limit *= 2.0'''
     
-    minBet = 0
-    maxBet = 1
-    minRaise = 0
-    maxRaise = 1
+    minBet = 99999
+    maxBet = -99999
+    minRaise = 99999
+    maxRaise = -99999
     pot = 0
     
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):

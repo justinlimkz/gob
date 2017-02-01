@@ -23,10 +23,10 @@ def getAction(myHand, data):
     numLegalActions = int(packet[2+numBoardCards+1+numLastActions+1])
     
     limit=0
-    minBet = 0
-    maxBet = 0
-    minRaise = 0
-    maxRaise = 0    
+    minBet = 99999
+    maxBet = -99999
+    minRaise = 99999
+    maxRaise = -99999
     
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
         if packet[i][0:len("BET")] == "BET":
@@ -79,10 +79,10 @@ def getAction(myHand, data):
         limit=value.high(hand)[1]*3
 
 
-    minBet = 0
-    maxBet = 1
-    minRaise = 0
-    maxRaise = 1
+    minBet = 99999
+    maxBet = -99999
+    minRaise = 99999
+    maxRaise = -99999
     pot = 0
         
     for i in range(2+numBoardCards+1+numLastActions+1+1, 2+numBoardCards+1+numLastActions+1+numLegalActions+1):
