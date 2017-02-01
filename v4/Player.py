@@ -8,6 +8,7 @@ import turn
 import river
 import value
 import preflop_fold
+import evaluate
 
 """
 Simple example pokerbot, written in python.
@@ -59,13 +60,15 @@ class Player:
                 
             if word == "GETACTION":  
                 numBoardCards = int(data.split()[2]) 
-                if ourScore <= -2000:
-                    return "CHECK\n"
-                elif sum(foldHistory[-50:]) >= 30:
+                limit = evaluate.evaluate(myHand, data)
+                
+                if ourScore <= -2000 and limit < 150:
+                    action = "CHECK\n"
+                elif sum(foldHistory[-50:]) >= 30 and limit < 150:
                     if numBoardCards == 0:
                         action = preflop_fold.getAction(myHand, data)
                     else:
-                        return "CHECK\n"
+                        action = "CHECK\n"
                 elif numBoardCards == 0:
                     action = preflop.getAction(myHand, data)
                     
@@ -83,6 +86,7 @@ class Player:
                                     myHand[0] = discard[2]
                                 else:
                                     myHand[1] = discard[2]
+                                    
                     action = flop.getAction(myHand, data)
                 elif numBoardCards == 4:
                     packet = data.split()
