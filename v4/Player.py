@@ -61,11 +61,13 @@ class Player:
                 numBoardCards = int(data.split()[2]) 
                 if ourScore <= -2000:
                     return "CHECK\n"
-                elif numBoardCards == 0:
-                    if sum(foldHistory[-50:]) >= 40:
+                elif sum(foldHistory[-50:]) >= 30:
+                    if numBoardCards == 0:
                         action = preflop_fold.getAction(myHand, data)
-                    else:    
-                        action = preflop.getAction(myHand, data)
+                    else:
+                        return "CHECK\n"
+                elif numBoardCards == 0:
+                    action = preflop.getAction(myHand, data)
                     
                 elif numBoardCards == 3:
                     packet = data.split()
