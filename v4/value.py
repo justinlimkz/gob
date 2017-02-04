@@ -147,10 +147,10 @@ def is_straight(hand):
     for i in range(len(hand)-4):
         counter=0
         for j in range(4):
-            if list_card[i+j]==list_card[i+j+1]-1:
+            if list_card_two[i+j]==list_card_two[i+j+1]-1:
                 counter+=1
             if counter==4:
-                high=list_card[i+j+1]
+                high=list_card_two[i+j+1]
                 straight=True
                 return [4,high]
     if not straight:

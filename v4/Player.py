@@ -9,6 +9,7 @@ import river
 import value
 import preflop_fold
 import evaluate
+import allin
 
 """
 Simple example pokerbot, written in python.
@@ -23,7 +24,10 @@ class Player:
         # Using this ensures that you get exactly one packet per read.
         f_in = input_socket.makefile()
         foldHistory = []
+        ourFoldHistory = []
+        scoreHistory = []
         ourScore = 0
+        allIn = True
 
         while True:
             # Block until the engine sends us a packet.
@@ -47,6 +51,7 @@ class Player:
             
             word = data.split()[0]
             handId = 0
+            modify = sum(ourFoldHistory[-50:])/20.0 
                         
             if word == "NEWGAME":
                 myName = data.split()[1]
@@ -57,20 +62,28 @@ class Player:
                 print (myHand)
                 handId = int(data.split()[1])
                 ourScore = int(data.split()[5])
-                
+                scoreHistory += [ourScore]
+                if len(scoreHistory) > 20 and scoreHistory[-1]-scoreHistory[-20] < -1000:
+                    allIn = False
+                                
             if word == "GETACTION":  
                 numBoardCards = int(data.split()[2]) 
                 limit = evaluate.evaluate(myHand, data)
                 
-                if ourScore <= -2000 and limit < 150:
+                if ourScore <= -2000 and limit < 100 and numBoardCards == 0:
                     action = "CHECK\n"
-                elif sum(foldHistory[-50:]) >= 30 and limit < 150:
+                elif ourScore <= -2000 and numBoardCards == 0:
+                    action = "RAISE:200\n"
+                elif not allIn and sum(foldHistory[-50:]) >= 30 and limit < 100 and numBoardCards == 0:
                     if numBoardCards == 0:
                         action = preflop_fold.getAction(myHand, data)
                     else:
                         action = "CHECK\n"
                 elif numBoardCards == 0:
-                    action = preflop.getAction(myHand, data)
+                    if allIn:
+                        action = allin.getAction(myHand, data, modify)
+                    else:
+                        action = preflop.getAction(myHand, data, modify)
                     
                 elif numBoardCards == 3:
                     packet = data.split()
@@ -87,7 +100,7 @@ class Player:
                                 else:
                                     myHand[1] = discard[2]
                                     
-                    action = flop.getAction(myHand, data)
+                    action = flop.getAction(myHand, data, modify)
                 elif numBoardCards == 4:
                     packet = data.split()
                     
@@ -103,9 +116,9 @@ class Player:
                                 else:
                                     myHand[1] = discard[2]
                     
-                    action = turn.getAction(myHand, data)
+                    action = turn.getAction(myHand, data, modify)
                 else:
-                    action = river.getAction(myHand, data)
+                    action = river.getAction(myHand, data, modify)
                 s.send(action)
             elif word == "HANDOVER":
                 foldAction = "FOLD:"+oppName
@@ -114,6 +127,12 @@ class Player:
                 else:
                     foldHistory += [0]
                 
+                ourFoldAction = "FOLD:"+myName
+                if ourFoldAction in data:
+                    ourFoldHistory += [1]
+                else:
+                    ourFoldHistory += [0]
+                     
             elif word == "REQUESTKEYVALUES":
                 # At the end, the engine will allow your bot save key/value pairs.
                 # Send FINISH to indicate you're done.

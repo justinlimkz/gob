@@ -18,7 +18,7 @@ def canDoThis(action, data):
             return True
     return False
 
-def getAction(myHand, data):
+def getAction(myHand, data, modify):
     packet = data.split()
     
     numBoardCards = int(packet[2])
@@ -205,7 +205,9 @@ def getAction(myHand, data):
 
         #print(limit) ##########
         #print (str(limit) + '\n\n')
-
+        if int (limit * modify)>limit:
+            limit = int (limit * modify)
+        
         minBet = 99999
         maxBet = -99999
         minRaise = 99999
@@ -273,7 +275,7 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
-                if(maxRaise - minRaise <= 25):
+                if(pot > 300-limit):
                     return "CALL\n"
         
             
@@ -284,7 +286,7 @@ def getAction(myHand, data):
                 return "RAISE:" + str(bet) + "\n"    
 
         if canDoThis("CALL", data):
-            if pot <= limit or maxRaise - minRaise <= 25:
+            if pot <= limit or pot > 300-limit:
                 return "CALL\n"
 
         return "CHECK\n";

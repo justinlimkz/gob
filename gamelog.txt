@@ -1,910 +1,1296 @@
-6.S912 MIT Pokerbots - CHECKFOLDBOT vs EzMoney (stack=200, bb=2)
-Hand #1, CHECKFOLDBOT (0), EzMoney (0)
-CHECKFOLDBOT posts the blind of 1
+6.S912 MIT Pokerbots - RANDOMBOT vs EzMoney (stack=200, bb=2)
+Hand #1, RANDOMBOT (0), EzMoney (0)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Qd 5s]
-Dealt to EzMoney [As Qh]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #2, EzMoney (1), CHECKFOLDBOT (-1)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [4c 5s]
-Dealt to CHECKFOLDBOT [Kd 7d]
-EzMoney raises to 5
-CHECKFOLDBOT folds
-Uncalled bet of 3 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #3, CHECKFOLDBOT (-3), EzMoney (3)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Kc 4s]
-Dealt to EzMoney [Td 6d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #4, EzMoney (4), CHECKFOLDBOT (-4)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Kd Td]
-Dealt to CHECKFOLDBOT [Qd 8c]
-EzMoney raises to 12
-CHECKFOLDBOT folds
-Uncalled bet of 10 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #5, CHECKFOLDBOT (-6), EzMoney (6)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5c 5h]
-Dealt to EzMoney [6d 9h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #6, EzMoney (7), CHECKFOLDBOT (-7)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [4h 3s]
-Dealt to CHECKFOLDBOT [5d Jh]
-EzMoney calls
-CHECKFOLDBOT checks
-*** FLOP *** (4) [8s Th Qc]
-CHECKFOLDBOT checks
-EzMoney discards 3s for Ac
-CHECKFOLDBOT checks
-EzMoney bets 4
-CHECKFOLDBOT folds
-Uncalled bet of 4 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #7, CHECKFOLDBOT (-9), EzMoney (9)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3d Qh]
-Dealt to EzMoney [5c Ks]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #8, EzMoney (10), CHECKFOLDBOT (-10)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Jd 7d]
-Dealt to CHECKFOLDBOT [Th Qh]
-EzMoney raises to 5
-CHECKFOLDBOT folds
-Uncalled bet of 3 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #9, CHECKFOLDBOT (-12), EzMoney (12)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [9s 5c]
-Dealt to EzMoney [Qc 3d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #10, EzMoney (13), CHECKFOLDBOT (-13)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [7d Qc]
-Dealt to CHECKFOLDBOT [2d Ah]
-EzMoney raises to 15
-CHECKFOLDBOT folds
-Uncalled bet of 13 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #11, CHECKFOLDBOT (-15), EzMoney (15)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [6d 8s]
-Dealt to EzMoney [2d Tc]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #12, EzMoney (16), CHECKFOLDBOT (-16)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Ts 6d]
-Dealt to CHECKFOLDBOT [Kd Qs]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #13, CHECKFOLDBOT (-18), EzMoney (18)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Ac Ad]
-Dealt to EzMoney [As 4d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #14, EzMoney (19), CHECKFOLDBOT (-19)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Kc 2h]
-Dealt to CHECKFOLDBOT [Kh Jh]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #15, CHECKFOLDBOT (-21), EzMoney (21)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3c 9d]
-Dealt to EzMoney [7d 3d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #16, EzMoney (22), CHECKFOLDBOT (-22)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [8d 2h]
-Dealt to CHECKFOLDBOT [6h 4d]
-EzMoney folds
-CHECKFOLDBOT wins the pot (3)
-
-Hand #17, CHECKFOLDBOT (-21), EzMoney (21)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5c 2h]
-Dealt to EzMoney [7d 7s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #18, EzMoney (22), CHECKFOLDBOT (-22)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [7h 9s]
-Dealt to CHECKFOLDBOT [Jh Th]
-EzMoney raises to 5
-CHECKFOLDBOT folds
-Uncalled bet of 3 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #19, CHECKFOLDBOT (-24), EzMoney (24)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2c 5s]
-Dealt to EzMoney [Tc 3d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #20, EzMoney (25), CHECKFOLDBOT (-25)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [2h Td]
-Dealt to CHECKFOLDBOT [Js 4h]
-EzMoney raises to 5
-CHECKFOLDBOT folds
-Uncalled bet of 3 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #21, CHECKFOLDBOT (-27), EzMoney (27)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2d Kh]
-Dealt to EzMoney [6c Qh]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #22, EzMoney (28), CHECKFOLDBOT (-28)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6s Jd]
-Dealt to CHECKFOLDBOT [4d 2d]
-EzMoney raises to 15
-CHECKFOLDBOT folds
-Uncalled bet of 13 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #23, CHECKFOLDBOT (-30), EzMoney (30)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [4d Th]
-Dealt to EzMoney [2d 4c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #24, EzMoney (31), CHECKFOLDBOT (-31)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6s Qc]
-Dealt to CHECKFOLDBOT [Th 6h]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #25, CHECKFOLDBOT (-33), EzMoney (33)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Qs 3h]
-Dealt to EzMoney [9c Ad]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #26, EzMoney (34), CHECKFOLDBOT (-34)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Qc Jh]
-Dealt to CHECKFOLDBOT [6h 4d]
-EzMoney raises to 12
-CHECKFOLDBOT folds
-Uncalled bet of 10 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #27, CHECKFOLDBOT (-36), EzMoney (36)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3d Qd]
-Dealt to EzMoney [Kc 3h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #28, EzMoney (37), CHECKFOLDBOT (-37)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [2d 5d]
-Dealt to CHECKFOLDBOT [6h 8d]
-EzMoney calls
-CHECKFOLDBOT checks
-*** FLOP *** (4) [8s 9h 4d]
-CHECKFOLDBOT checks
-EzMoney discards 2d for Kd
-CHECKFOLDBOT checks
-EzMoney bets 13
-CHECKFOLDBOT folds
-Uncalled bet of 13 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #29, CHECKFOLDBOT (-39), EzMoney (39)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Qc Kh]
-Dealt to EzMoney [5h 6c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #30, EzMoney (40), CHECKFOLDBOT (-40)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6c 9c]
-Dealt to CHECKFOLDBOT [4s 3c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #31, CHECKFOLDBOT (-42), EzMoney (42)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Ts 8c]
-Dealt to EzMoney [Jc 5s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #32, EzMoney (43), CHECKFOLDBOT (-43)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Kd Ts]
-Dealt to CHECKFOLDBOT [Td 2c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #33, CHECKFOLDBOT (-45), EzMoney (45)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [7s Th]
-Dealt to EzMoney [3c 4d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #34, EzMoney (46), CHECKFOLDBOT (-46)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6s Kh]
-Dealt to CHECKFOLDBOT [Td 2c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #35, CHECKFOLDBOT (-48), EzMoney (48)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [9h 7c]
-Dealt to EzMoney [8h 8s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #36, EzMoney (49), CHECKFOLDBOT (-49)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [As Ad]
-Dealt to CHECKFOLDBOT [3d 5c]
+Dealt to RANDOMBOT [7d Jh]
+Dealt to EzMoney [5h As]
+RANDOMBOT calls
 EzMoney raises to 200
-CHECKFOLDBOT folds
+RANDOMBOT folds
 Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #37, CHECKFOLDBOT (-51), EzMoney (51)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3h 3d]
-Dealt to EzMoney [9h Ts]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #38, EzMoney (52), CHECKFOLDBOT (-52)
+Hand #2, EzMoney (2), RANDOMBOT (-2)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [5h Kc]
-Dealt to CHECKFOLDBOT [3c Jd]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qd 4h]
+Dealt to RANDOMBOT [Ts 6s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #39, CHECKFOLDBOT (-54), EzMoney (54)
-CHECKFOLDBOT posts the blind of 1
+Hand #3, RANDOMBOT (-4), EzMoney (4)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3c 8h]
-Dealt to EzMoney [Ks Js]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Qc Jd]
+Dealt to EzMoney [5s Th]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #40, EzMoney (55), CHECKFOLDBOT (-55)
+Hand #4, EzMoney (5), RANDOMBOT (-5)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Qh Kh]
-Dealt to CHECKFOLDBOT [6c Ks]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [3c 5s]
+Dealt to RANDOMBOT [2s Td]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #41, CHECKFOLDBOT (-57), EzMoney (57)
-CHECKFOLDBOT posts the blind of 1
+Hand #5, RANDOMBOT (-7), EzMoney (7)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [9c 9d]
-Dealt to EzMoney [Ts 7h]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Ad Ts]
+Dealt to EzMoney [Jh 3s]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4d 6c 9c]
+EzMoney discards 3s for Jd
+RANDOMBOT discards Ad for 6d
+*** TURN *** (400) [4d 6c 9c] [8h]
+EzMoney checks
+RANDOMBOT discards 6d for 4c
+*** RIVER *** (400) [4d 6c 9c 8h] [Kh]
+RANDOMBOT shows [Ts 4c]
+EzMoney shows [Jh Jd]
+EzMoney wins the pot (400)
+
+Hand #6, EzMoney (207), RANDOMBOT (-207)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [3c 5h]
+Dealt to RANDOMBOT [7d Tc]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4d 7h 3s]
+RANDOMBOT discards Tc for 5d
+EzMoney discards 5h for Kc
+*** TURN *** (400) [4d 7h 3s] [Kh]
+RANDOMBOT discards 7d for 6s
+EzMoney checks
+*** RIVER *** (400) [4d 7h 3s Kh] [Ad]
+EzMoney shows [3c Kc]
+RANDOMBOT shows [5d 6s]
+RANDOMBOT wins the pot (400)
+
+Hand #7, RANDOMBOT (-7), EzMoney (7)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [3c Ks]
+Dealt to EzMoney [4s Tc]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Ah Jd Ad]
+EzMoney discards 4s for 4d
+RANDOMBOT discards 3c for Kc
+*** TURN *** (400) [Ah Jd Ad] [5d]
+EzMoney discards Tc for 8s
+RANDOMBOT discards Kc for Ac
+*** RIVER *** (400) [Ah Jd Ad 5d] [Qh]
+RANDOMBOT shows [Ks Ac]
+EzMoney shows [4d 8s]
+RANDOMBOT wins the pot (400)
+
+Hand #8, EzMoney (-193), RANDOMBOT (193)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qh 5h]
+Dealt to RANDOMBOT [Tc Js]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Jh As 4d]
+RANDOMBOT discards Js for 2s
+EzMoney discards 5h for Ah
+*** TURN *** (400) [Jh As 4d] [Kd]
+RANDOMBOT discards Tc for Th
+EzMoney checks
+*** RIVER *** (400) [Jh As 4d Kd] [Ac]
+EzMoney shows [Qh Ah]
+RANDOMBOT shows [2s Th]
+EzMoney wins the pot (400)
+
+Hand #9, RANDOMBOT (-7), EzMoney (7)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [7d 2s]
+Dealt to EzMoney [2c 3c]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #42, EzMoney (58), CHECKFOLDBOT (-58)
+Hand #10, EzMoney (8), RANDOMBOT (-8)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [3h 9h]
-Dealt to CHECKFOLDBOT [2c 6d]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [As Ah]
+Dealt to RANDOMBOT [Kc Qc]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #43, CHECKFOLDBOT (-60), EzMoney (60)
-CHECKFOLDBOT posts the blind of 1
+Hand #11, RANDOMBOT (-10), EzMoney (10)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5d Td]
-Dealt to EzMoney [As 7s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
+Dealt to RANDOMBOT [6s Kh]
+Dealt to EzMoney [4s 8d]
+RANDOMBOT raises to 195
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 5 returned to EzMoney
+EzMoney wins the pot (390)
 
-Hand #44, EzMoney (61), CHECKFOLDBOT (-61)
+Hand #12, EzMoney (205), RANDOMBOT (-205)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [2c Qd]
-Dealt to CHECKFOLDBOT [Ac 7c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [7h 3d]
+Dealt to RANDOMBOT [7d Jc]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #45, CHECKFOLDBOT (-63), EzMoney (63)
-CHECKFOLDBOT posts the blind of 1
+Hand #13, RANDOMBOT (-207), EzMoney (207)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5s 6c]
-Dealt to EzMoney [3s 2h]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [3c Qd]
+Dealt to EzMoney [6s 2h]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #46, EzMoney (64), CHECKFOLDBOT (-64)
+Hand #14, EzMoney (208), RANDOMBOT (-208)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [8s 5h]
-Dealt to CHECKFOLDBOT [Kd 6s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [9h 7s]
+Dealt to RANDOMBOT [Qd 3h]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [9c 5d Ts]
+RANDOMBOT discards Qd for 4s
+EzMoney discards 7s for Th
+*** TURN *** (400) [9c 5d Ts] [2h]
+RANDOMBOT discards 3h for 8d
+EzMoney checks
+*** RIVER *** (400) [9c 5d Ts 2h] [Ad]
+EzMoney shows [9h Th]
+RANDOMBOT shows [4s 8d]
+EzMoney wins the pot (400)
+
+Hand #15, RANDOMBOT (-408), EzMoney (408)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Th 3d]
+Dealt to EzMoney [Jc 4d]
+RANDOMBOT raises to 181
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [7d 5h 2h]
+EzMoney discards 4d for Ac
+RANDOMBOT discards Th for 8h
+*** TURN *** (400) [7d 5h 2h] [8c]
+EzMoney discards Jc for Kd
+RANDOMBOT checks
+*** RIVER *** (400) [7d 5h 2h 8c] [Qc]
+RANDOMBOT shows [3d 8h]
+EzMoney shows [Ac Kd]
+RANDOMBOT wins the pot (400)
+
+Hand #16, EzMoney (208), RANDOMBOT (-208)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [2c Ac]
+Dealt to RANDOMBOT [Th 9h]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #47, CHECKFOLDBOT (-66), EzMoney (66)
-CHECKFOLDBOT posts the blind of 1
+Hand #17, RANDOMBOT (-210), EzMoney (210)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [4c 9c]
-Dealt to EzMoney [7h 4s]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [8s 3h]
+Dealt to EzMoney [7d 2d]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #48, EzMoney (67), CHECKFOLDBOT (-67)
+Hand #18, EzMoney (211), RANDOMBOT (-211)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9h Td]
-Dealt to CHECKFOLDBOT [8d 6c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [6c Js]
+Dealt to RANDOMBOT [7d Qc]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Qs 7s 3h]
+RANDOMBOT discards 7d for 9d
+EzMoney discards 6c for 6d
+*** TURN *** (400) [Qs 7s 3h] [5c]
+RANDOMBOT checks
+EzMoney discards 6d for Jh
+*** RIVER *** (400) [Qs 7s 3h 5c] [Th]
+EzMoney shows [Js Jh]
+RANDOMBOT shows [Qc 9d]
+RANDOMBOT wins the pot (400)
+
+Hand #19, RANDOMBOT (-11), EzMoney (11)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Tc 2s]
+Dealt to EzMoney [7h 7s]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #20, EzMoney (12), RANDOMBOT (-12)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [5h Ks]
+Dealt to RANDOMBOT [Kc Th]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #49, CHECKFOLDBOT (-69), EzMoney (69)
-CHECKFOLDBOT posts the blind of 1
+Hand #21, RANDOMBOT (-14), EzMoney (14)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Jh 6c]
-Dealt to EzMoney [4s 2d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
+Dealt to RANDOMBOT [8h 7c]
+Dealt to EzMoney [Th 2h]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Ad 3h 5d]
+EzMoney discards 2h for Ac
+RANDOMBOT discards 8h for Qs
+*** TURN *** (400) [Ad 3h 5d] [9s]
+EzMoney discards Th for 7s
+RANDOMBOT discards 7c for Jh
+*** RIVER *** (400) [Ad 3h 5d 9s] [Kc]
+RANDOMBOT shows [Qs Jh]
+EzMoney shows [Ac 7s]
+EzMoney wins the pot (400)
 
-Hand #50, EzMoney (70), CHECKFOLDBOT (-70)
+Hand #22, EzMoney (214), RANDOMBOT (-214)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [4h 3c]
-Dealt to CHECKFOLDBOT [7h 6h]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [3s Td]
+Dealt to RANDOMBOT [2c 3c]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #51, CHECKFOLDBOT (-72), EzMoney (72)
-CHECKFOLDBOT posts the blind of 1
+Hand #23, RANDOMBOT (-216), EzMoney (216)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [9h 4h]
-Dealt to EzMoney [Kh 7h]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [2h 2c]
+Dealt to EzMoney [Qh Kc]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #52, EzMoney (73), CHECKFOLDBOT (-73)
+Hand #24, EzMoney (217), RANDOMBOT (-217)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9s Qs]
-Dealt to CHECKFOLDBOT [7c 2d]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qc 3s]
+Dealt to RANDOMBOT [Jc Kc]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [5h 7h Kh]
+RANDOMBOT checks
+EzMoney discards 3s for 2c
+*** TURN *** (400) [5h 7h Kh] [8c]
+RANDOMBOT discards Kc for 6s
+EzMoney discards 2c for Qd
+*** RIVER *** (400) [5h 7h Kh 8c] [7s]
+EzMoney shows [Qc Qd]
+RANDOMBOT shows [Jc 6s]
+EzMoney wins the pot (400)
+
+Hand #25, RANDOMBOT (-417), EzMoney (417)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [3s 8h]
+Dealt to EzMoney [2h 8c]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [5c 4s 7d]
+EzMoney discards 2h for Ks
+RANDOMBOT checks
+*** TURN *** (400) [5c 4s 7d] [Kc]
+EzMoney discards 8c for Td
+RANDOMBOT discards 8h for 5d
+*** RIVER *** (400) [5c 4s 7d Kc] [5h]
+RANDOMBOT shows [3s 5d]
+EzMoney shows [Ks Td]
+RANDOMBOT wins the pot (400)
+
+Hand #26, EzMoney (217), RANDOMBOT (-217)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Jh 7c]
+Dealt to RANDOMBOT [6c Ah]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [8h Qs 2c]
+RANDOMBOT discards 6c for 6s
+EzMoney discards 7c for 9h
+*** TURN *** (400) [8h Qs 2c] [Tc]
+RANDOMBOT discards 6s for 7h
+EzMoney checks
+*** RIVER *** (400) [8h Qs 2c Tc] [8c]
+EzMoney shows [Jh 9h]
+RANDOMBOT shows [Ah 7h]
+EzMoney wins the pot (400)
+
+Hand #27, RANDOMBOT (-417), EzMoney (417)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [3s Kd]
+Dealt to EzMoney [9d Ks]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #28, EzMoney (418), RANDOMBOT (-418)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Th 6c]
+Dealt to RANDOMBOT [5s 8d]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4s As 3s]
+RANDOMBOT discards 5s for 7d
+EzMoney discards 6c for 3d
+*** TURN *** (400) [4s As 3s] [Ks]
+RANDOMBOT discards 8d for 2d
+EzMoney discards Th for 4c
+*** RIVER *** (400) [4s As 3s Ks] [8s]
+EzMoney shows [3d 4c]
+RANDOMBOT shows [7d 2d]
+EzMoney ties for the pot (200)
+RANDOMBOT ties for the pot (200)
+
+Hand #29, RANDOMBOT (-418), EzMoney (418)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [5d Kh]
+Dealt to EzMoney [8d 5h]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [7h 5s 4s]
+EzMoney discards 8d for 7s
+RANDOMBOT checks
+*** TURN *** (400) [7h 5s 4s] [6h]
+EzMoney discards 5h for 2s
+RANDOMBOT discards Kh for 2d
+*** RIVER *** (400) [7h 5s 4s 6h] [9h]
+RANDOMBOT shows [5d 2d]
+EzMoney shows [7s 2s]
+EzMoney wins the pot (400)
+
+Hand #30, EzMoney (618), RANDOMBOT (-618)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [7h 3c]
+Dealt to RANDOMBOT [4c Kd]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #53, CHECKFOLDBOT (-75), EzMoney (75)
-CHECKFOLDBOT posts the blind of 1
+Hand #31, RANDOMBOT (-620), EzMoney (620)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2h Js]
-Dealt to EzMoney [6h 2c]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Ad Th]
+Dealt to EzMoney [7c Ah]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #54, EzMoney (76), CHECKFOLDBOT (-76)
+Hand #32, EzMoney (621), RANDOMBOT (-621)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [2h 4h]
-Dealt to CHECKFOLDBOT [9h 7s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Ac Kd]
+Dealt to RANDOMBOT [8c 8d]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #55, CHECKFOLDBOT (-78), EzMoney (78)
-CHECKFOLDBOT posts the blind of 1
+Hand #33, RANDOMBOT (-623), EzMoney (623)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5d Qs]
-Dealt to EzMoney [5h 7c]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Qc 7d]
+Dealt to EzMoney [Js Td]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #56, EzMoney (79), CHECKFOLDBOT (-79)
+Hand #34, EzMoney (624), RANDOMBOT (-624)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6d 3d]
-Dealt to CHECKFOLDBOT [Qs Th]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [4h Ts]
+Dealt to RANDOMBOT [Qc 2c]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [2s 9s 3c]
+RANDOMBOT discards 2c for 4s
+EzMoney discards 4h for 9h
+*** TURN *** (400) [2s 9s 3c] [As]
+RANDOMBOT discards Qc for 8h
+EzMoney discards 9h for Kc
+*** RIVER *** (400) [2s 9s 3c As] [Jh]
+EzMoney shows [Ts Kc]
+RANDOMBOT shows [4s 8h]
+EzMoney wins the pot (400)
+
+Hand #35, RANDOMBOT (-824), EzMoney (824)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [4c 8c]
+Dealt to EzMoney [5s 4s]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [2h Kh 8h]
+EzMoney discards 4s for Ad
+RANDOMBOT checks
+*** TURN *** (400) [2h Kh 8h] [6s]
+EzMoney discards 5s for 9c
+RANDOMBOT discards 8c for 7d
+*** RIVER *** (400) [2h Kh 8h 6s] [9h]
+RANDOMBOT shows [4c 7d]
+EzMoney shows [Ad 9c]
+EzMoney wins the pot (400)
+
+Hand #36, EzMoney (1024), RANDOMBOT (-1024)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [6h 6d]
+Dealt to RANDOMBOT [8h 5s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #57, CHECKFOLDBOT (-81), EzMoney (81)
-CHECKFOLDBOT posts the blind of 1
+Hand #37, RANDOMBOT (-1026), EzMoney (1026)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Qd 6h]
-Dealt to EzMoney [5d 9s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #58, EzMoney (82), CHECKFOLDBOT (-82)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [8h 6c]
-Dealt to CHECKFOLDBOT [5d 6s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #59, CHECKFOLDBOT (-84), EzMoney (84)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2c Kc]
-Dealt to EzMoney [3c 7c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #60, EzMoney (85), CHECKFOLDBOT (-85)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [8h 5s]
-Dealt to CHECKFOLDBOT [7h Qc]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #61, CHECKFOLDBOT (-87), EzMoney (87)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [3d 5c]
-Dealt to EzMoney [8h 5s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #62, EzMoney (88), CHECKFOLDBOT (-88)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Kh 2d]
-Dealt to CHECKFOLDBOT [8s 5c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #63, CHECKFOLDBOT (-90), EzMoney (90)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [6s 8s]
-Dealt to EzMoney [8c 7c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #64, EzMoney (91), CHECKFOLDBOT (-91)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6d 4h]
-Dealt to CHECKFOLDBOT [2d Jh]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #65, CHECKFOLDBOT (-93), EzMoney (93)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Jc As]
-Dealt to EzMoney [Ts 6h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #66, EzMoney (94), CHECKFOLDBOT (-94)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [4s 5d]
-Dealt to CHECKFOLDBOT [2h Js]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #67, CHECKFOLDBOT (-96), EzMoney (96)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [6d Qc]
-Dealt to EzMoney [2h Tc]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #68, EzMoney (97), CHECKFOLDBOT (-97)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Qc Ah]
-Dealt to CHECKFOLDBOT [2s Jc]
-EzMoney raises to 100
-CHECKFOLDBOT folds
-Uncalled bet of 98 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #69, CHECKFOLDBOT (-99), EzMoney (99)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [4c Jd]
-Dealt to EzMoney [Qc 6c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #70, EzMoney (100), CHECKFOLDBOT (-100)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Td 3d]
-Dealt to CHECKFOLDBOT [Qd 2s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #71, CHECKFOLDBOT (-102), EzMoney (102)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5h Qs]
-Dealt to EzMoney [6h 8c]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #72, EzMoney (103), CHECKFOLDBOT (-103)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Ks Jd]
-Dealt to CHECKFOLDBOT [5c 4d]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #73, CHECKFOLDBOT (-105), EzMoney (105)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2h Th]
-Dealt to EzMoney [4d As]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #74, EzMoney (106), CHECKFOLDBOT (-106)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9d Th]
-Dealt to CHECKFOLDBOT [7d 6s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #75, CHECKFOLDBOT (-108), EzMoney (108)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Js Ac]
-Dealt to EzMoney [5h 4d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #76, EzMoney (109), CHECKFOLDBOT (-109)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9d As]
-Dealt to CHECKFOLDBOT [4d Qs]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #77, CHECKFOLDBOT (-111), EzMoney (111)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [2h 7d]
-Dealt to EzMoney [6s 8d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #78, EzMoney (112), CHECKFOLDBOT (-112)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [6s Qh]
-Dealt to CHECKFOLDBOT [5h 8h]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #79, CHECKFOLDBOT (-114), EzMoney (114)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [6d 5c]
-Dealt to EzMoney [2h 8h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #80, EzMoney (115), CHECKFOLDBOT (-115)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [5h 4h]
-Dealt to CHECKFOLDBOT [4c Kh]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
-EzMoney wins the pot (4)
-
-Hand #81, CHECKFOLDBOT (-117), EzMoney (117)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5h 9h]
-Dealt to EzMoney [Td Qh]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #82, EzMoney (118), CHECKFOLDBOT (-118)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
+Dealt to RANDOMBOT [3s 7c]
 Dealt to EzMoney [Th As]
-Dealt to CHECKFOLDBOT [4h 2c]
-EzMoney raises to 150
-CHECKFOLDBOT folds
-Uncalled bet of 148 returned to EzMoney
-EzMoney wins the pot (4)
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [5c Jd 4d]
+EzMoney discards Th for 8s
+RANDOMBOT discards 3s for 4s
+*** TURN *** (400) [5c Jd 4d] [3h]
+EzMoney discards 8s for 9h
+RANDOMBOT discards 7c for Td
+*** RIVER *** (400) [5c Jd 4d 3h] [6c]
+RANDOMBOT shows [4s Td]
+EzMoney shows [As 9h]
+RANDOMBOT wins the pot (400)
 
-Hand #83, CHECKFOLDBOT (-120), EzMoney (120)
-CHECKFOLDBOT posts the blind of 1
+Hand #38, EzMoney (826), RANDOMBOT (-826)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Ts 5c]
+Dealt to RANDOMBOT [Jd 4d]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4h 8d 9d]
+RANDOMBOT discards 4d for Qc
+EzMoney discards 5c for Ah
+*** TURN *** (400) [4h 8d 9d] [5h]
+RANDOMBOT discards Jd for Th
+EzMoney discards Ts for 3h
+*** RIVER *** (400) [4h 8d 9d 5h] [Jh]
+EzMoney shows [Ah 3h]
+RANDOMBOT shows [Qc Th]
+EzMoney wins the pot (400)
+
+Hand #39, RANDOMBOT (-1026), EzMoney (1026)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [9d 4h]
-Dealt to EzMoney [Kc 7d]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Qd 9c]
+Dealt to EzMoney [4d 2s]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #84, EzMoney (121), CHECKFOLDBOT (-121)
+Hand #40, EzMoney (1027), RANDOMBOT (-1027)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [As Td]
-Dealt to CHECKFOLDBOT [4c Ks]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Tc 4d]
+Dealt to RANDOMBOT [Kd Qh]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Ks 9d 7s]
+RANDOMBOT discards Qh for 8h
+EzMoney discards 4d for 6h
+*** TURN *** (400) [Ks 9d 7s] [Kc]
+RANDOMBOT discards Kd for 5d
+EzMoney discards 6h for 4h
+*** RIVER *** (400) [Ks 9d 7s Kc] [Ac]
+EzMoney shows [Tc 4h]
+RANDOMBOT shows [8h 5d]
+EzMoney wins the pot (400)
+
+Hand #41, RANDOMBOT (-1227), EzMoney (1227)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Qc 7c]
+Dealt to EzMoney [2d Th]
+RANDOMBOT raises to 91
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 109 returned to EzMoney
+EzMoney wins the pot (182)
+
+Hand #42, EzMoney (1318), RANDOMBOT (-1318)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Kc Qd]
+Dealt to RANDOMBOT [8c Qh]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #85, CHECKFOLDBOT (-123), EzMoney (123)
-CHECKFOLDBOT posts the blind of 1
+Hand #43, RANDOMBOT (-1320), EzMoney (1320)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Ac 8c]
-Dealt to EzMoney [5d 2h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
+Dealt to RANDOMBOT [3c 3s]
+Dealt to EzMoney [Jd 8c]
+RANDOMBOT raises to 56
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Kc Td 7c]
+EzMoney discards 8c for Ac
+RANDOMBOT discards 3s for 7d
+*** TURN *** (400) [Kc Td 7c] [Qc]
+EzMoney checks
+RANDOMBOT checks
+*** RIVER *** (400) [Kc Td 7c Qc] [5d]
+RANDOMBOT shows [3c 7d]
+EzMoney shows [Jd Ac]
+EzMoney wins the pot (400)
 
-Hand #86, EzMoney (124), CHECKFOLDBOT (-124)
+Hand #44, EzMoney (1520), RANDOMBOT (-1520)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9h 2h]
-Dealt to CHECKFOLDBOT [2d Js]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qc Ad]
+Dealt to RANDOMBOT [Kh 6s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #87, CHECKFOLDBOT (-126), EzMoney (126)
-CHECKFOLDBOT posts the blind of 1
+Hand #45, RANDOMBOT (-1522), EzMoney (1522)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5s Jc]
-Dealt to EzMoney [Kd 8h]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
+Dealt to RANDOMBOT [Qc 8h]
+Dealt to EzMoney [6s Ah]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [7h Qd 5c]
+EzMoney discards 6s for 6h
+RANDOMBOT checks
+*** TURN *** (400) [7h Qd 5c] [6d]
+EzMoney checks
+RANDOMBOT discards 8h for Td
+*** RIVER *** (400) [7h Qd 5c 6d] [Ad]
+RANDOMBOT shows [Qc Td]
+EzMoney shows [Ah 6h]
+EzMoney wins the pot (400)
 
-Hand #88, EzMoney (127), CHECKFOLDBOT (-127)
+Hand #46, EzMoney (1722), RANDOMBOT (-1722)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [9h 3c]
-Dealt to CHECKFOLDBOT [7c 5s]
-EzMoney folds
-CHECKFOLDBOT wins the pot (3)
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qd 9c]
+Dealt to RANDOMBOT [Kc 2s]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [As Jh Jd]
+RANDOMBOT discards 2s for Qs
+EzMoney discards 9c for 8h
+*** TURN *** (400) [As Jh Jd] [6d]
+RANDOMBOT discards Qs for 2h
+EzMoney discards 8h for Jc
+*** RIVER *** (400) [As Jh Jd 6d] [8c]
+EzMoney shows [Qd Jc]
+RANDOMBOT shows [Kc 2h]
+EzMoney wins the pot (400)
 
-Hand #89, CHECKFOLDBOT (-126), EzMoney (126)
-CHECKFOLDBOT posts the blind of 1
+Hand #47, RANDOMBOT (-1922), EzMoney (1922)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [4s Qh]
-Dealt to EzMoney [9d 6s]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #90, EzMoney (127), CHECKFOLDBOT (-127)
-EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Ac 7c]
-Dealt to CHECKFOLDBOT [3h 2h]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+Dealt to RANDOMBOT [Kd Th]
+Dealt to EzMoney [Kc Qs]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #91, CHECKFOLDBOT (-129), EzMoney (129)
-CHECKFOLDBOT posts the blind of 1
-EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5d 3c]
-Dealt to EzMoney [Th 3d]
-CHECKFOLDBOT folds
-EzMoney wins the pot (3)
-
-Hand #92, EzMoney (130), CHECKFOLDBOT (-130)
+Hand #48, EzMoney (1924), RANDOMBOT (-1924)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [5h 4d]
-Dealt to CHECKFOLDBOT [9s 5c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qh 4h]
+Dealt to RANDOMBOT [5c 8d]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #93, CHECKFOLDBOT (-132), EzMoney (132)
-CHECKFOLDBOT posts the blind of 1
+Hand #49, RANDOMBOT (-1926), EzMoney (1926)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Jc 8c]
-Dealt to EzMoney [Tc 4h]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [3s 3c]
+Dealt to EzMoney [4h 7s]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #94, EzMoney (133), CHECKFOLDBOT (-133)
+Hand #50, EzMoney (1927), RANDOMBOT (-1927)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [7c 8d]
-Dealt to CHECKFOLDBOT [Kd 9s]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [6h 8h]
+Dealt to RANDOMBOT [2d 3h]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #95, CHECKFOLDBOT (-135), EzMoney (135)
-CHECKFOLDBOT posts the blind of 1
+Hand #51, RANDOMBOT (-1929), EzMoney (1929)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [6c 9h]
-Dealt to EzMoney [4s 5c]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Qs Js]
+Dealt to EzMoney [Ah Ac]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #96, EzMoney (136), CHECKFOLDBOT (-136)
+Hand #52, EzMoney (1930), RANDOMBOT (-1930)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Ks Th]
-Dealt to CHECKFOLDBOT [As Kc]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [3h 6c]
+Dealt to RANDOMBOT [5d Tc]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Qs Kc 5s]
+RANDOMBOT discards Tc for Ks
+EzMoney discards 3h for 2c
+*** TURN *** (400) [Qs Kc 5s] [7h]
+RANDOMBOT discards Ks for 9c
+EzMoney discards 2c for 3s
+*** RIVER *** (400) [Qs Kc 5s 7h] [Jc]
+EzMoney shows [6c 3s]
+RANDOMBOT shows [5d 9c]
+RANDOMBOT wins the pot (400)
+
+Hand #53, RANDOMBOT (-1730), EzMoney (1730)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [5d Js]
+Dealt to EzMoney [Jd 9c]
+RANDOMBOT raises to 26
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [5s 7h Ts]
+EzMoney discards 9c for 8h
+RANDOMBOT discards 5d for 7c
+*** TURN *** (400) [5s 7h Ts] [Td]
+EzMoney discards 8h for 5h
+RANDOMBOT discards 7c for 8d
+*** RIVER *** (400) [5s 7h Ts Td] [7s]
+RANDOMBOT shows [Js 8d]
+EzMoney shows [Jd 5h]
+RANDOMBOT ties for the pot (200)
+EzMoney ties for the pot (200)
+
+Hand #54, EzMoney (1730), RANDOMBOT (-1730)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [5c 3h]
+Dealt to RANDOMBOT [Ks Kh]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #97, CHECKFOLDBOT (-138), EzMoney (138)
-CHECKFOLDBOT posts the blind of 1
+Hand #55, RANDOMBOT (-1732), EzMoney (1732)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [Jh Ad]
-Dealt to EzMoney [Ah Jc]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [Qs Kh]
+Dealt to EzMoney [4d 7s]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [2h 8d 4s]
+EzMoney discards 7s for Jc
+RANDOMBOT discards Qs for 3s
+*** TURN *** (400) [2h 8d 4s] [Qc]
+EzMoney checks
+RANDOMBOT checks
+*** RIVER *** (400) [2h 8d 4s Qc] [5s]
+RANDOMBOT shows [Kh 3s]
+EzMoney shows [4d Jc]
+EzMoney wins the pot (400)
+
+Hand #56, EzMoney (1932), RANDOMBOT (-1932)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [4h 9d]
+Dealt to RANDOMBOT [Td 2s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #57, RANDOMBOT (-1934), EzMoney (1934)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [8h 3s]
+Dealt to EzMoney [5s Kh]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #98, EzMoney (139), CHECKFOLDBOT (-139)
+Hand #58, EzMoney (1935), RANDOMBOT (-1935)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [Ad Ac]
-Dealt to CHECKFOLDBOT [Qd 2d]
-EzMoney raises to 66
-CHECKFOLDBOT folds
-Uncalled bet of 64 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [2h 7c]
+Dealt to RANDOMBOT [Ts 8d]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-Hand #99, CHECKFOLDBOT (-141), EzMoney (141)
-CHECKFOLDBOT posts the blind of 1
+Hand #59, RANDOMBOT (-1937), EzMoney (1937)
+RANDOMBOT posts the blind of 1
 EzMoney posts the blind of 2
-Dealt to CHECKFOLDBOT [5h Ac]
-Dealt to EzMoney [Js 6s]
-CHECKFOLDBOT folds
+Dealt to RANDOMBOT [3s Qs]
+Dealt to EzMoney [6c 9d]
+RANDOMBOT folds
 EzMoney wins the pot (3)
 
-Hand #100, EzMoney (142), CHECKFOLDBOT (-142)
+Hand #60, EzMoney (1938), RANDOMBOT (-1938)
 EzMoney posts the blind of 1
-CHECKFOLDBOT posts the blind of 2
-Dealt to EzMoney [2d Ad]
-Dealt to CHECKFOLDBOT [6s 7c]
-EzMoney raises to 4
-CHECKFOLDBOT folds
-Uncalled bet of 2 returned to EzMoney
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [2d Kd]
+Dealt to RANDOMBOT [9s Th]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
 EzMoney wins the pot (4)
 
-FINAL: CHECKFOLDBOT (-144) EzMoney (144)
+Hand #61, RANDOMBOT (-1940), EzMoney (1940)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ac Js]
+Dealt to EzMoney [Ts 2d]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #62, EzMoney (1942), RANDOMBOT (-1942)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [5h 6d]
+Dealt to RANDOMBOT [Kc 2c]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #63, RANDOMBOT (-1944), EzMoney (1944)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ad 6s]
+Dealt to EzMoney [6c Jc]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #64, EzMoney (1945), RANDOMBOT (-1945)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qh Ac]
+Dealt to RANDOMBOT [9c 4c]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #65, RANDOMBOT (-1947), EzMoney (1947)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [6d 7c]
+Dealt to EzMoney [8d Jd]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #66, EzMoney (1949), RANDOMBOT (-1949)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [8d 6h]
+Dealt to RANDOMBOT [5d Td]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #67, RANDOMBOT (-1951), EzMoney (1951)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [6d Qs]
+Dealt to EzMoney [7s Js]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #68, EzMoney (1952), RANDOMBOT (-1952)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [3c 6d]
+Dealt to RANDOMBOT [5c 8d]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #69, RANDOMBOT (-1954), EzMoney (1954)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [4d Jh]
+Dealt to EzMoney [9c Ah]
+RANDOMBOT raises to 41
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [9s 4c 7d]
+EzMoney discards Ah for 5h
+RANDOMBOT checks
+*** TURN *** (400) [9s 4c 7d] [7h]
+EzMoney discards 5h for Qh
+RANDOMBOT discards Jh for 6h
+*** RIVER *** (400) [9s 4c 7d 7h] [Td]
+RANDOMBOT shows [4d 6h]
+EzMoney shows [9c Qh]
+EzMoney wins the pot (400)
+
+Hand #70, EzMoney (2154), RANDOMBOT (-2154)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [2h Qs]
+Dealt to RANDOMBOT [8c Qh]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Kh Ad 5h]
+RANDOMBOT checks
+EzMoney discards 2h for Ks
+*** TURN *** (400) [Kh Ad 5h] [6d]
+RANDOMBOT discards Qh for 5s
+EzMoney checks
+*** RIVER *** (400) [Kh Ad 5h 6d] [9s]
+EzMoney shows [Qs Ks]
+RANDOMBOT shows [8c 5s]
+EzMoney wins the pot (400)
+
+Hand #71, RANDOMBOT (-2354), EzMoney (2354)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [3h Ad]
+Dealt to EzMoney [6d Ks]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #72, EzMoney (2356), RANDOMBOT (-2356)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [5s Kd]
+Dealt to RANDOMBOT [5c 9h]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #73, RANDOMBOT (-2358), EzMoney (2358)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ac Jh]
+Dealt to EzMoney [Ah 2h]
+RANDOMBOT raises to 132
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [6d 6s 5d]
+EzMoney discards 2h for Tc
+RANDOMBOT discards Ac for 7h
+*** TURN *** (400) [6d 6s 5d] [4c]
+EzMoney discards Tc for 6c
+RANDOMBOT discards Jh for 8s
+*** RIVER *** (400) [6d 6s 5d 4c] [3c]
+RANDOMBOT shows [7h 8s]
+EzMoney shows [Ah 6c]
+RANDOMBOT wins the pot (400)
+
+Hand #74, EzMoney (2158), RANDOMBOT (-2158)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [2s Jh]
+Dealt to RANDOMBOT [8d Jc]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #75, RANDOMBOT (-2160), EzMoney (2160)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [9d Jc]
+Dealt to EzMoney [7h 8c]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #76, EzMoney (2161), RANDOMBOT (-2161)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Qs Ad]
+Dealt to RANDOMBOT [Qc 6c]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4c 4h 3h]
+RANDOMBOT discards 6c for Kh
+EzMoney discards Qs for Qd
+*** TURN *** (400) [4c 4h 3h] [As]
+RANDOMBOT discards Kh for 9h
+EzMoney discards Qd for 9c
+*** RIVER *** (400) [4c 4h 3h As] [6d]
+EzMoney shows [Ad 9c]
+RANDOMBOT shows [Qc 9h]
+EzMoney wins the pot (400)
+
+Hand #77, RANDOMBOT (-2361), EzMoney (2361)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Jc 4c]
+Dealt to EzMoney [Ad 3h]
+RANDOMBOT raises to 21
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 179 returned to EzMoney
+EzMoney wins the pot (42)
+
+Hand #78, EzMoney (2382), RANDOMBOT (-2382)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [8h Jd]
+Dealt to RANDOMBOT [3d 6h]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #79, RANDOMBOT (-2384), EzMoney (2384)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [5d 3h]
+Dealt to EzMoney [3c 7c]
+RANDOMBOT raises to 171
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 29 returned to EzMoney
+EzMoney wins the pot (342)
+
+Hand #80, EzMoney (2555), RANDOMBOT (-2555)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [4s 8h]
+Dealt to RANDOMBOT [Qc Qh]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Tc Kc Js]
+RANDOMBOT discards Qh for 8s
+EzMoney discards 4s for 4d
+*** TURN *** (400) [Tc Kc Js] [5d]
+RANDOMBOT discards Qc for 5s
+EzMoney discards 4d for Ac
+*** RIVER *** (400) [Tc Kc Js 5d] [7c]
+EzMoney shows [8h Ac]
+RANDOMBOT shows [8s 5s]
+RANDOMBOT wins the pot (400)
+
+Hand #81, RANDOMBOT (-2355), EzMoney (2355)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [4c 5h]
+Dealt to EzMoney [3c 7h]
+RANDOMBOT raises to 54
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 146 returned to EzMoney
+EzMoney wins the pot (108)
+
+Hand #82, EzMoney (2409), RANDOMBOT (-2409)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [As 2c]
+Dealt to RANDOMBOT [5h 7s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #83, RANDOMBOT (-2411), EzMoney (2411)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ad Tc]
+Dealt to EzMoney [Qs 7d]
+RANDOMBOT raises to 40
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Jc Js 9h]
+EzMoney discards 7d for 6h
+RANDOMBOT discards Tc for Qh
+*** TURN *** (400) [Jc Js 9h] [7c]
+EzMoney discards 6h for 7s
+RANDOMBOT checks
+*** RIVER *** (400) [Jc Js 9h 7c] [6s]
+RANDOMBOT shows [Ad Qh]
+EzMoney shows [Qs 7s]
+EzMoney wins the pot (400)
+
+Hand #84, EzMoney (2611), RANDOMBOT (-2611)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Ac Qh]
+Dealt to RANDOMBOT [Kd 6s]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [6c Qs Kh]
+RANDOMBOT checks
+EzMoney discards Ac for 8h
+*** TURN *** (400) [6c Qs Kh] [Ah]
+RANDOMBOT checks
+EzMoney checks
+*** RIVER *** (400) [6c Qs Kh Ah] [Tc]
+EzMoney shows [Qh 8h]
+RANDOMBOT shows [Kd 6s]
+RANDOMBOT wins the pot (400)
+
+Hand #85, RANDOMBOT (-2411), EzMoney (2411)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ad 8d]
+Dealt to EzMoney [Kd 2s]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #86, EzMoney (2413), RANDOMBOT (-2413)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Td 2c]
+Dealt to RANDOMBOT [Ks 5h]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #87, RANDOMBOT (-2415), EzMoney (2415)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [9s 5d]
+Dealt to EzMoney [7c Qs]
+RANDOMBOT raises to 114
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [6s Jh Jd]
+EzMoney discards 7c for 8s
+RANDOMBOT discards 5d for 2d
+*** TURN *** (400) [6s Jh Jd] [Ts]
+EzMoney checks
+RANDOMBOT discards 9s for 8d
+*** RIVER *** (400) [6s Jh Jd Ts] [3c]
+RANDOMBOT shows [2d 8d]
+EzMoney shows [Qs 8s]
+EzMoney wins the pot (400)
+
+Hand #88, EzMoney (2615), RANDOMBOT (-2615)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [5c Ad]
+Dealt to RANDOMBOT [Qh Kc]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [6c Jd Td]
+RANDOMBOT checks
+EzMoney discards 5c for 8c
+*** TURN *** (400) [6c Jd Td] [5h]
+RANDOMBOT discards Qh for 8d
+EzMoney discards 8c for Tc
+*** RIVER *** (400) [6c Jd Td 5h] [2s]
+EzMoney shows [Ad Tc]
+RANDOMBOT shows [Kc 8d]
+EzMoney wins the pot (400)
+
+Hand #89, RANDOMBOT (-2815), EzMoney (2815)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [5c Ts]
+Dealt to EzMoney [Kd 9s]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [3h Tc 2h]
+EzMoney discards 9s for Td
+RANDOMBOT discards Ts for 4s
+*** TURN *** (400) [3h Tc 2h] [Jd]
+EzMoney checks
+RANDOMBOT discards 5c for 5d
+*** RIVER *** (400) [3h Tc 2h Jd] [4d]
+RANDOMBOT shows [4s 5d]
+EzMoney shows [Kd Td]
+EzMoney wins the pot (400)
+
+Hand #90, EzMoney (3015), RANDOMBOT (-3015)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [9d 2c]
+Dealt to RANDOMBOT [8d As]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #91, RANDOMBOT (-3017), EzMoney (3017)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Jd 7h]
+Dealt to EzMoney [Qc 5d]
+RANDOMBOT folds
+EzMoney wins the pot (3)
+
+Hand #92, EzMoney (3018), RANDOMBOT (-3018)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Jc 6d]
+Dealt to RANDOMBOT [Jd Jh]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [4c Qd Qs]
+RANDOMBOT discards Jh for 6s
+EzMoney discards 6d for 9d
+*** TURN *** (400) [4c Qd Qs] [Kh]
+RANDOMBOT checks
+EzMoney discards 9d for Qh
+*** RIVER *** (400) [4c Qd Qs Kh] [5h]
+EzMoney shows [Jc Qh]
+RANDOMBOT shows [Jd 6s]
+EzMoney wins the pot (400)
+
+Hand #93, RANDOMBOT (-3218), EzMoney (3218)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [5s Kh]
+Dealt to EzMoney [Ts Qc]
+RANDOMBOT raises to 119
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [2c Td Qd]
+EzMoney checks
+RANDOMBOT discards Kh for 4d
+*** TURN *** (400) [2c Td Qd] [Tc]
+EzMoney discards Qc for 6s
+RANDOMBOT checks
+*** RIVER *** (400) [2c Td Qd Tc] [9c]
+RANDOMBOT shows [5s 4d]
+EzMoney shows [Ts 6s]
+EzMoney wins the pot (400)
+
+Hand #94, EzMoney (3418), RANDOMBOT (-3418)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [6h 7s]
+Dealt to RANDOMBOT [Ac Qd]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #95, RANDOMBOT (-3420), EzMoney (3420)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ah 7d]
+Dealt to EzMoney [6c Js]
+RANDOMBOT raises to 43
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 157 returned to EzMoney
+EzMoney wins the pot (86)
+
+Hand #96, EzMoney (3463), RANDOMBOT (-3463)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Jc 7d]
+Dealt to RANDOMBOT [7h 3d]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #97, RANDOMBOT (-3465), EzMoney (3465)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [2h Kd]
+Dealt to EzMoney [8h 9c]
+RANDOMBOT raises to 108
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 92 returned to EzMoney
+EzMoney wins the pot (216)
+
+Hand #98, EzMoney (3573), RANDOMBOT (-3573)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [Js Ts]
+Dealt to RANDOMBOT [Ks 9s]
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #99, RANDOMBOT (-3575), EzMoney (3575)
+RANDOMBOT posts the blind of 1
+EzMoney posts the blind of 2
+Dealt to RANDOMBOT [Ts Jd]
+Dealt to EzMoney [7h 4h]
+RANDOMBOT calls
+EzMoney raises to 200
+RANDOMBOT folds
+Uncalled bet of 198 returned to EzMoney
+EzMoney wins the pot (4)
+
+Hand #100, EzMoney (3577), RANDOMBOT (-3577)
+EzMoney posts the blind of 1
+RANDOMBOT posts the blind of 2
+Dealt to EzMoney [4d Ts]
+Dealt to RANDOMBOT [9s 9c]
+EzMoney raises to 200
+RANDOMBOT calls
+*** FLOP *** (400) [Qh 8h Kh]
+RANDOMBOT checks
+EzMoney discards 4d for Ks
+*** TURN *** (400) [Qh 8h Kh] [8d]
+RANDOMBOT discards 9s for Qc
+EzMoney discards Ts for Tc
+*** RIVER *** (400) [Qh 8h Kh 8d] [Td]
+EzMoney shows [Ks Tc]
+RANDOMBOT shows [9c Qc]
+EzMoney wins the pot (400)
+
+FINAL: RANDOMBOT (-3777) EzMoney (3777)

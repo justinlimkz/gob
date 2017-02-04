@@ -14,7 +14,7 @@ def canDoThis(action, data):
 
 NO = [-1, -1]
 
-def getAction(myHand, data):
+def getAction(myHand, data, modify):
     rank = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9 ,'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 
     packet = data.split()
@@ -256,6 +256,8 @@ def getAction(myHand, data):
 
         #print(limit) ##########
         print str(limit) + '\n\n'
+        if int (limit * modify)>limit:
+            limit = int (limit * modify)
 
         minBet = 99999
         maxBet = -99999
@@ -323,7 +325,7 @@ def getAction(myHand, data):
             if 55<rng<=100:
                 if canDoThis("CHECK", data):
                     return "CHECK\n"
-                if(maxRaise - minRaise <= 25):
+                if(pot > 300-limit):
                     return "CALL\n"
         
             bet = max(limit*multiplier, minRaise)
@@ -333,7 +335,7 @@ def getAction(myHand, data):
                 return "RAISE:" + str(bet) + "\n"    
 
         if canDoThis("CALL", data):
-            if pot <= limit or maxRaise - minRaise <= 25:
+            if pot <= limit or pot > 300-limit:
                 return "CALL\n"
         
         return "CHECK\n";

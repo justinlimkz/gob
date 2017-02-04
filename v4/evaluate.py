@@ -18,8 +18,8 @@ def evaluate(myHand, data):
     combined = myHand+board
     
     if numBoardCards == 0:
-        if data.split()[4] == "POST:1:EzMoney" and abs(num[0]-num[1]) > 4 and suit[0] != suit[1] and max(num[0], num[1]) < 10:
-            return "FOLD\n"
+        #if data.split()[4] == "POST:1:EzMoney" and abs(num[0]-num[1]) > 4 and suit[0] != suit[1] and max(num[0], num[1]) < 10:
+            #limit = 0
 
         odds =[[85,76,66,65,65,63,62,61,60,60,59,58,57],
                [65,82,63,63,62,60,58,58,57,56,55,54,53],
@@ -220,6 +220,8 @@ def evaluate(myHand, data):
                 limit = 15
             
     else:
+        hand = combined
+        boardCards = board
         if value.is_royal(hand) != NO or value.is_flush(hand) != NO or value.is_of_a_kind(hand)[0] == 7 or value.is_full_house(hand)[0] == 6 or value.is_straight(hand) != NO:
             limit = 200
         elif value.is_full_house(hand)[0]==2:
